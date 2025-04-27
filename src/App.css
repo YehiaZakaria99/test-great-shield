@@ -1,0 +1,70 @@
+:root {
+  --main-color: #ff8904;
+  --main-hover-color: #ff8904;
+  --nav-bg: #161d26;
+  --services-txt: #121212;
+  /* --main-hover-color: #f6c3a9; */
+}
+
+.active {
+  color: var(--main-color);
+}
+
+/* Gradiant Text */
+.text-bg{
+  background: linear-gradient(
+    270deg,
+    var(--main-color) 0%,
+    #f6c3a9 50%,
+    #fff 100%
+  );
+  -webkit-background-clip: text;
+  -o-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -o-te-webkit-text-fill-color: transparent;
+  -moz-te-webkit-text-fill-color: transparent;
+  line-height: 150%;
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* Carousel */
+
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before {
+  color: #fff;
+}
+.slick-dots li button:before {
+  font-size: 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.width-special {
+  @media (width <= 31.25rem) {
+    width: 160px;
+  }
+}
+
+.container {
+  @media (width <= 576px) {
+    width: 100%;
+  }
+}
+
+.hero-sec {
+  background-image: url('/hero/bgHero.webp');
+  /* @media (width <= 576px) {
+    background-image: url(/hero/bgHeroMobile.webp);
+  }
+  @media (width > 576px) {
+  } */
+}
+
+

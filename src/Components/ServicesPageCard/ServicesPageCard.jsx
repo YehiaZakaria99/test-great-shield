@@ -37,12 +37,12 @@ export default function ServicesPageCard({ service }) {
                 {/* BG Image */}
                 <div className="w-full md:w-1/3 min-h-[200px] md:min-h-[320px]">
                   <div className="w-full h-full bg-black/40  rounded-l-2xl">
-                    {/* <img
+                    <img
                       className="h-full object-cover"
                       src={section.img}
                       alt={section.subTitle}
                       loading="lazy"
-                    /> */}
+                    />
                   </div>
                 </div>
 

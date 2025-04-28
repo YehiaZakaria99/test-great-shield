@@ -16,6 +16,7 @@ export default {
       },
       animation: {
         bounceX: "bounceX 1s ease-in-out infinite",
+        "fade-in": "fade-in 0.3s ease-out",
       },
       keyframes: {
         bounceX: {
@@ -27,6 +28,16 @@ export default {
           "100%": {
             transform: "translateX(0%)",
             "animation-timing-function": "cubic-bezier(0.8, 0, 1, 1)",
+          },
+        },
+        "fade-in": {
+          from: {
+            opacity: 0,
+            transform: "scale(0.95)",
+          },
+          to: {
+            opacity: 1,
+            transform: "scale(1)",
           },
         },
       },

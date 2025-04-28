@@ -32,7 +32,7 @@ const About = () => {
     <section id="about" className="pb-20 bg-navBg overflow-x-hidden">
       <div className="container max-w-7xl  px-4">
         <div className="mb-12" data-aos="fade-up" data-aos-easing="ease-in-out">
-          <h2 className="text-4xl font-bold mb-6 text-bg">About Us</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-bg">About Us</h2>
           <p className="text-lg leading-relaxed max-w-3xl text-gray-100">
             Our construction company specializes in executing engineering
             projects to the highest quality standards. We are distinguished by

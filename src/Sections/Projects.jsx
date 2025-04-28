@@ -56,7 +56,7 @@ export default function Projects() {
           data-aos="fade-up"
           data-aos-easing="ease-in-out"
         >
-          <h2 className="text-4xl font-bold text-bg">Our Featured Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-bg">Our Featured Projects</h2>
         </div>
         <Slider ref={sliderRef} {...settings}>
           {projects.map((project, idx) => (

@@ -4,6 +4,8 @@ import About from "./../Sections/About.jsx";
 import Projects from "../Sections/Projects.jsx";
 // AOS Animation
 import "aos/dist/aos.css";
+import Customers from "./../Sections/Customers";
+import CustomersContextProvider from "../Context/CustomersContext.jsx";
 
 const Home = () => {
   return (
@@ -12,6 +14,9 @@ const Home = () => {
       <Services />
       <About />
       <Projects />
+      <CustomersContextProvider>
+        <Customers />
+      </CustomersContextProvider>
       {/* <Contact /> */}
     </>
   );

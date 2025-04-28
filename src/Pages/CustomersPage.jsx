@@ -1,0 +1,42 @@
+import "aos/dist/aos.css";
+import Aos from "aos";
+import { useContext, useEffect } from "react";
+import { CustomersContext } from "../Context/CustomersContext";
+
+export default function CustomersPage() {
+  const { logos } = useContext(CustomersContext);
+  console.log(logos);
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
+  return (
+    <section className="pt-40 pb-16 bg-[#111] text-white min-h-screen overflow-hidden">
+      <div className="container mx-auto text-center">
+        <h1
+          className="text-4xl font-bold mb-12 text-mainColor"
+          data-aos="fade-down"
+        >
+          Our Clients
+        </h1>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 items-center">
+          {logos.map((logo, index) => (
+            <div
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={(index % 5) * 100}
+            >
+              <img
+                src={logo}
+                alt={`Client ${index + 1}`}
+                className="h-32 mx-auto  transition-all duration-300"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

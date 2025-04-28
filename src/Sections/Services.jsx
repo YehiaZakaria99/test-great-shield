@@ -57,7 +57,7 @@ const Services = () => {
           data-aos="fade-up"
           data-aos-easing="ease-in-out"
         >
-          <h2 className="text-4xl font-bold text-bg">Our Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-bg">Our Services</h2>
         </div>
 
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-5">

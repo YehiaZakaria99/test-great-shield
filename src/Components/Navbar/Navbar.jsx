@@ -50,7 +50,7 @@ const Navbar = () => {
                 <NavLink
                   key={path}
                   to={path}
-                  className="hover:text-mainColor transition"
+                  className="hover:text-mainColor transition duration-300"
                 >
                   {labels[idx]}
                 </NavLink>
@@ -63,7 +63,7 @@ const Navbar = () => {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <button className="flex items-center gap-1 hover:text-mainColor transition">
+            <button className="flex items-center gap-1 hover:text-mainColor transition duration-300">
               Other {isDropdownOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
             </button>
             <div
@@ -72,25 +72,25 @@ const Navbar = () => {
               }`}
             >
               <NavLink
-                to="/team"
-                className="block px-4 py-2 hover:bg-mainColor/20 transition whitespace-nowrap"
+                to="/customers"
+                className="block px-4 py-2 hover:text-mainColor transition whitespace-nowrap duration-300"
                 onClick={() => setIsDropdownOpen(false)}
               >
-                Our Team
+                Our Clients
               </NavLink>
               <NavLink
                 to="/careers"
-                className="block px-4 py-2 hover:bg-mainColor/20 transition whitespace-nowrap"
+                className="block px-4 py-2 hover:text-mainColor transition whitespace-nowrap duration-300"
                 onClick={() => setIsDropdownOpen(false)}
               >
-                Careers
+                Lorem, ipsum.
               </NavLink>
               <NavLink
                 to="/blog"
-                className="block px-4 py-2 hover:bg-mainColor/20 transition whitespace-nowrap"
+                className="block px-4 py-2 hover:text-mainColor transition whitespace-nowrap duration-300"
                 onClick={() => setIsDropdownOpen(false)}
               >
-                Blog
+                Lorem, ipsum.
               </NavLink>
             </div>
           </div>
@@ -126,7 +126,7 @@ const Navbar = () => {
                 key={path}
                 to={path}
                 onClick={closeMenu}
-                className="block py-2 hover:text-mainColor transition"
+                className="block py-2 hover:text-mainColor transition duration-300"
               >
                 {labels[idx]}
               </NavLink>
@@ -138,7 +138,7 @@ const Navbar = () => {
         <div className="py-2">
           <button
             onClick={() => setIsDropdownOpen((prev) => !prev)}
-            className="flex items-center gap-1 w-full hover:text-mainColor transition"
+            className="flex items-center gap-1 w-full hover:text-mainColor transition duration-300"
           >
             Other {isDropdownOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
           </button>
@@ -148,25 +148,25 @@ const Navbar = () => {
             }`}
           >
             <NavLink
-              to="/team"
-              className="block py-1 hover:text-mainColor transition"
+              to="/customers"
+              className="block py-1 hover:text-mainColor transition duration-300"
               onClick={closeMenu}
             >
-              Our Team
+              Our Clients
             </NavLink>
             <NavLink
               to="/careers"
-              className="block py-1 hover:text-mainColor transition"
+              className="block py-1 hover:text-mainColor transition duration-300"
               onClick={closeMenu}
             >
-              Careers
+              Lorem, ipsum.
             </NavLink>
             <NavLink
               to="/blog"
-              className="block py-1 hover:text-mainColor transition"
+              className="block py-1 hover:text-mainColor transition duration-300"
               onClick={closeMenu}
             >
-              Blog
+              Lorem, ipsum.
             </NavLink>
           </div>
         </div>

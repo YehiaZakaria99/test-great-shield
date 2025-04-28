@@ -53,7 +53,7 @@ export default function ProjectDetails() {
               data-aos="fade-left"
             >
               <div className="my-4">
-                <h3 className="text-3xl font-bold text-(--main-color) mb-4">
+                <h3 className="text-3xl font-bold text-mainColor mb-4">
                   {projects[id].title}
                 </h3>
                 <div className="details text-white py-4">
@@ -106,13 +106,13 @@ export default function ProjectDetails() {
           <div className="mt-8 text-center">
             <Link
               to="/projects"
-              className="inline-block bg-(--main-color) hover:bg-orange-500 text-white font-semibold px-6 py-2 rounded-lg transition duration-300 shadow-md"
+              className="inline-block bg-mainColor hover:bg-orange-500 text-white font-semibold px-6 py-2 rounded-lg transition duration-300 shadow-md"
             >
               Back To Projects
             </Link>
             <HashLink
               smooth to="/#projects"
-              className="ms-5 inline-block bg-(--main-color) hover:bg-orange-500 text-white font-semibold px-6 py-2 rounded-lg transition duration-300 shadow-md"
+              className="ms-5 inline-block bg-mainColor hover:bg-orange-500 text-white font-semibold px-6 py-2 rounded-lg transition duration-300 shadow-md"
             >
               Back To Home
             </HashLink>

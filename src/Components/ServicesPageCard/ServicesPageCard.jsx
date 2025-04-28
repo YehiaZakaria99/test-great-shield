@@ -33,12 +33,12 @@ export default function ServicesPageCard({ service }) {
               data-aos="fade-up"
               data-aos-easing="ease-in-out"
             >
-              <div className="flex flex-col md:flex-row items-stretch gap-6 bg-(--nav-bg) border border-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 min-h-[320px] overflow-hidden">
+              <div className="flex flex-col md:flex-row items-stretch gap-6 bg-navBg border border-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 min-h-[320px] overflow-hidden">
                 {/* BG Image */}
                 <div className="w-full md:w-1/3 min-h-[200px] md:min-h-[320px]">
-                  <div className="w-full h-full bg-black/40  rounded-l-2xl">
+                  <div className="w-full rounded-l-2xl h-full flex">
                     <img
-                      className="h-full object-cover"
+                      className="object-cover"
                       src={section.img}
                       alt={section.subTitle}
                       loading="lazy"
@@ -48,7 +48,7 @@ export default function ServicesPageCard({ service }) {
 
                 {/* Text */}
                 <div className="w-full md:w-2/3 p-6">
-                  <h4 className="text-2xl font-semibold text-(--main-color) mb-4">
+                  <h4 className="text-2xl font-semibold text-mainColor mb-4">
                     {section.subTitle}
                   </h4>
                   <ul className="list-disc list-inside space-y-2 text-sm text-gray-300 leading-relaxed">

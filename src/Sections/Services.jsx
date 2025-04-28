@@ -50,7 +50,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section id="services" className="py-16 bg-(--nav-bg) text-white">
+    <section id="services" className="py-16 bg-navBg text-white">
       <div className="container max-w-7xl mx-auto px-4">
         <div
           className="text-center mb-12"
@@ -80,7 +80,7 @@ const Services = () => {
         >
           <button
             onClick={() => goTo("/services")}
-            className="inline-flex items-center group px-5 py-3 border-2 border-(--main-color) text-(--main-color) hover:bg-(--main-color) hover:text-(--nav-bg) transition duration-300 rounded-lg"
+            className="inline-flex items-center group px-5 py-3 border-2 border-mainColor text-mainColor hover:bg-mainColor hover:text-navBg transition duration-300 rounded-lg"
           >
             More Details
             <svg

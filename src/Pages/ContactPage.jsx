@@ -44,7 +44,7 @@ public-key: OOlPmBj-KjzyftCSE
     <section className="pt-40 pb-16 bg-[#111] text-white">
       <div className="max-w-7xl mx-auto mb-24 px-4">
         <h2
-          className="text-4xl md:text-5xl font-bold text-center text-(--main-color) mb-6"
+          className="text-4xl md:text-5xl font-bold text-center text-mainColor mb-6"
           data-aos="fade-right"
           data-aos-easing="ease-in-out"
         >
@@ -83,10 +83,10 @@ public-key: OOlPmBj-KjzyftCSE
             data-aos-delay={500}
             ref={form}
             onSubmit={sendEmail}
-            className="space-y-6 bg-(--nav-bg) p-8 rounded-2xl shadow-2xs shadow-[#ff8904] "
+            className="space-y-6 bg-navBg p-8 rounded-2xl shadow-sm shadow-[#ff8904] "
           >
             <div>
-              <label className="block mb-2 font-semibold text-(--main-color)">
+              <label className="block mb-2 font-semibold text-mainColor">
                 Full Name
               </label>
               <input
@@ -98,7 +98,7 @@ public-key: OOlPmBj-KjzyftCSE
             </div>
 
             <div>
-              <label className="block mb-2 font-semibold text-(--main-color)">
+              <label className="block mb-2 font-semibold text-mainColor">
                 Email
               </label>
               <input
@@ -110,7 +110,7 @@ public-key: OOlPmBj-KjzyftCSE
             </div>
 
             <div>
-              <label className="block mb-2 font-semibold text-(--main-color)">
+              <label className="block mb-2 font-semibold text-mainColor">
                 Phone (optional)
               </label>
               <input
@@ -121,7 +121,7 @@ public-key: OOlPmBj-KjzyftCSE
             </div>
 
             <div>
-              <label className="block mb-2 font-semibold text-(--main-color)">
+              <label className="block mb-2 font-semibold text-mainColor">
                 Subject
               </label>
               <input
@@ -133,7 +133,7 @@ public-key: OOlPmBj-KjzyftCSE
             </div>
 
             <div>
-              <label className="block mb-2 font-semibold text-(--main-color)">
+              <label className="block mb-2 font-semibold text-mainColor">
                 Message
               </label>
               <textarea

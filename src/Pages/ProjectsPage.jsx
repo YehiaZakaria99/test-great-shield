@@ -20,7 +20,7 @@ export default function ProjectsPage() {
       <div className="container">
         <div className="">
           <h2
-            className="text-4xl md:text-5xl font-bold text-center text-(--main-color) mb-2"
+            className="text-4xl md:text-5xl font-bold text-center text-mainColor mb-2"
             data-aos="fade-right"
             data-aos-easing="ease-in-out"
           >

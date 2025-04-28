@@ -16,7 +16,7 @@ export default function ProjectsPageCard({ project, index }) {
           loading="lazy"
         />
         <div className="p-4">
-          <h3 className="text-2xl font-semibold text-(--main-color) mb-2">
+          <h3 className="text-2xl font-semibold text-mainColor mb-2">
             {project.title.split(" ", 3).join(" ")}...
           </h3>
           <p className="text-gray-300 line-clamp-3">

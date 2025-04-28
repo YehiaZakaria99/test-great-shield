@@ -49,7 +49,7 @@ export default function Projects() {
   const { projects } = useContext(ProjectsContext);
   const navigate = useNavigate();
   return (
-    <section className="pb-20 bg-(--nav-bg)" id="projects">
+    <section className="pb-20 bg-navBg" id="projects">
       <div className="max-w-6xl mx-auto px-4">
         <div
           className="text-center mb-12"
@@ -74,7 +74,7 @@ export default function Projects() {
                   loading="lazy"
                 />
                 <div className="text-center md:text-left md:w-1/2">
-                  <h3 className="text-2xl font-semibold text-(--main-color) mb-2">
+                  <h3 className="text-2xl font-semibold text-mainColor mb-2">
                     {project.title}
                   </h3>
                   <p className="mb-4 text-gray-100">{project.location}</p>

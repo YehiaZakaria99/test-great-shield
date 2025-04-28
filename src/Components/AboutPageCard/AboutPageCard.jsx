@@ -67,7 +67,7 @@ export default function AboutPageCard({ id, title, text, img, moreContent }) {
           {moreContent && (
             <button
               onClick={() => openModal()}
-              className="mt-6 gap-2 inline-flex items-center group outline-none px-3 py-2 text-sm font-medium border-2 border-(--main-color)  text-(--main-color) hover:bg-(--main-color) hover:text-(--nav-bg) transition-all duration-300 rounded-lg"
+              className="mt-6 gap-2 inline-flex items-center group outline-none px-3 py-2 text-sm font-medium border-2 border-mainColor  text-mainColor hover:bg-mainColor hover:text-navBg transition-all duration-300 rounded-lg"
             >
               View More
               <FaArrowRight className="transition-all group-hover:animate-bounceX duration-75" />

@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <header
       className={`fixed w-full top-0 z-50 px-5 py-1 ${
-        scrolling ? "bg-(--nav-bg) shadow-lg" : "shadow-none"
+        scrolling ? "bg-navBg shadow-lg" : "shadow-none"
       } duration-300`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center p-1">
@@ -41,7 +41,7 @@ const Navbar = () => {
               <NavLink
                 key={path}
                 to={path}
-                className="hover:text-(--main-hover-color) transition"
+                className="hover:text-mainColor transition"
               >
                 {labels[idx]}
               </NavLink>
@@ -51,7 +51,7 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-(--main-color) cursor-pointer"
+          className="md:hidden text-mainColor cursor-pointer"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -61,7 +61,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out bg-(--nav-bg) text-white px-5 rounded-md ${
+        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out bg-navBg text-white px-5 rounded-md ${
           isOpen ? "max-h-96 opacity-100 py-4" : "max-h-0 opacity-0 py-0"
         }`}
       >
@@ -72,7 +72,7 @@ const Navbar = () => {
               key={path}
               to={path}
               onClick={closeMenu}
-              className="block py-2 hover:text-(--main-hover-color) transition"
+              className="block py-2 hover:text-mainColor transition"
             >
               {labels[idx]}
             </NavLink>

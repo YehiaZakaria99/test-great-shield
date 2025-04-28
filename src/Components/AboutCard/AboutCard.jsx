@@ -21,7 +21,7 @@ const AboutCard = ({ title, img, link }) => {
 
   return (
     <HashLink smooth to={link} scroll={(el) => scrollWithOffset(el)}>
-      <div className="bg-[#222] overflow-hidden group border border-(--main-color) rounded-lg shadow-md h-full flex flex-col px-4 py-4 transition-transform hover:scale-[1.03] duration-300">
+      <div className="bg-[#222] overflow-hidden group border border-mainColor rounded-lg shadow-md h-full flex flex-col px-4 py-4 transition-transform hover:scale-[1.03] duration-300">
         <div className="img-box">
           <img
             className="about-card-img rounded-lg w-full h-52 object-cover"

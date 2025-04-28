@@ -59,12 +59,14 @@ button {
 }
 
 .hero-sec {
-  background-image: url('/hero/bgHero.webp');
-  /* @media (width <= 576px) {
+  @media (width <= 576px) {
     background-image: url(/hero/bgHeroMobile.webp);
+    background-position: right;
   }
   @media (width > 576px) {
-  } */
+    background-image: url('/hero/bgHero.webp');
+    background-position: top;
+  }
 }
 
 

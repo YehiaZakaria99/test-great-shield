@@ -190,7 +190,7 @@ export default function ServicesPage() {
         >
           <div className="container mx-auto px-4">
             <h2
-              className="text-4xl md:text-5xl font-bold text-center text-(--main-color) mb-16"
+              className="text-4xl md:text-5xl font-bold text-center text-mainColor mb-16"
               data-aos="fade-right"
               data-aos-easing="ease-in-out"
             >

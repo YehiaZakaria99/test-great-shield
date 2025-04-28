@@ -16,8 +16,13 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="h-screen hero-sec bg-cover bg-left  md:bg-top bg-no-repeat bg-fixed p-[100px_0] relative overflow-x-hidden">
-      <div className="absolute inset-0 bg-(--nav-bg)/75 flex flex-col justify-center items-center text-white text-center p-4">
+    <section
+      className="h-screen hero-sec  bg-cover  relative overflow-x-hidden"
+      // style={{
+      //   // backgroundImage: 'url("/hero/bgHeroMobile.webp")',
+      // }}
+    >
+      <div className="absolute inset-0 bg-navBg/75 flex flex-col justify-center items-center text-white text-center p-4">
         <h1
           className="text-4xl md:text-6xl font-bold mb-4 text-bg animate-[1s]  translate-all duration-500"
           data-aos="fade-up"
@@ -50,7 +55,7 @@ export default function Hero() {
         >
           <button
             onClick={() => goTo("/contact")}
-            className="inline-flex items-center outline-none px-4 py-2 group text-md font-medium border-2 bg-(--nav-bg)  text-(--main-color) hover:bg-(--main-color) hover:text-(--nav-bg) transition-all duration-300 rounded-lg"
+            className="inline-flex items-center outline-none px-4 py-2 group text-md font-medium border-2 border-mainColor  bg-navBg  text-mainColor hover:bg-mainColor hover:text-navBg transition-all duration-300 rounded-lg"
           >
             Contact Us
             <svg

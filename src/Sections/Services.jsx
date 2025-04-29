@@ -54,10 +54,24 @@ const Services = () => {
       <div className="container max-w-7xl mx-auto px-4">
         <div
           className="text-center mb-12"
-          data-aos="fade-up"
-          data-aos-easing="ease-in-out"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-bg">Our Services</h2>
+          <h2
+            className="text-3xl md:text-4xl font-bold text-bg"
+            data-aos="fade-right"
+            data-aos-easing="ease-in-out"
+          >
+            Our Services
+          </h2>
+          <p
+            className="text-lg leading-relaxed max-w-3xl text-gray-100 mx-auto"
+            data-aos="fade-left"
+            data-aos-easing="ease-in-out"
+          >
+            As a leading general contractor in Egypt, Great Shield Constructions
+            provides a comprehensive range of integrated services encompassing
+            all stages of construction, from initial design and planning through
+            to execution and final delivery.
+          </p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-5">
@@ -68,7 +82,7 @@ const Services = () => {
               data-aos-easing="ease-in-out"
               data-aos-delay={index * 200}
             >
-              <ServiceCard key={index} title={title} img={img} />
+              <ServiceCard title={title} img={img} />
             </div>
           ))}
         </div>

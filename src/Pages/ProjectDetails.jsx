@@ -30,7 +30,7 @@ export default function ProjectDetails() {
     <>
       <div className="bg-[#111] min-h-screen flex items-center justify-center py-20 px-4">
         <section className="productDetails w-full max-w-7xl" data-aos="fade-up">
-          <div className="box flex items-center gap-6 flex-wrap md:flex-nowrap bg-[#1a1a1a] rounded-2xl p-6 shadow-lg shadow-black/30">
+          <div className="box flex items-center gap-6 flex-wrap md:flex-nowrap bg-navBg rounded-2xl p-6 shadow-lg shadow-black/30">
             {/* images */}
             <div className="w-full md:w-1/3 lg:w-1/4" data-aos="fade-right">
               <Slider {...settings} className="mb-6">
@@ -106,13 +106,13 @@ export default function ProjectDetails() {
           <div className="mt-8 text-center">
             <Link
               to="/projects"
-              className="inline-block bg-mainColor hover:bg-orange-500 text-white font-semibold px-6 py-2 rounded-lg transition duration-300 shadow-md"
+              className="inline-block text-white bg-mainColor hover:text-mainColor hover:bg-white font-semibold px-6 py-2 rounded-lg transition duration-300 shadow-md"
             >
               Back To Projects
             </Link>
             <HashLink
               smooth to="/#projects"
-              className="ms-5 inline-block bg-mainColor hover:bg-orange-500 text-white font-semibold px-6 py-2 rounded-lg transition duration-300 shadow-md"
+              className="ms-5 inline-block text-white bg-navBg hover:text-navBg hover:bg-white font-semibold px-6 py-2 rounded-lg transition duration-300 shadow-md"
             >
               Back To Home
             </HashLink>

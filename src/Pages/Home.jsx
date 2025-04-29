@@ -6,6 +6,7 @@ import Projects from "../Sections/Projects.jsx";
 import "aos/dist/aos.css";
 import Customers from "./../Sections/Customers";
 import CustomersContextProvider from "../Context/CustomersContext.jsx";
+import Contact from "../Sections/Contact.jsx";
 
 const Home = () => {
   return (
@@ -17,7 +18,7 @@ const Home = () => {
       <CustomersContextProvider>
         <Customers />
       </CustomersContextProvider>
-      {/* <Contact /> */}
+      <Contact />
     </>
   );
 };

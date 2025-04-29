@@ -20,6 +20,7 @@ import ProjectDetails from "./Pages/ProjectDetails.jsx";
 import ProjectsContextProvider from "./Context/ProjectsContext.jsx";
 import CustomersPage from "./Pages/CustomersPage.jsx";
 import CustomersContextProvider from "./Context/CustomersContext.jsx";
+import Portfolio from "./Pages/Portfolio.jsx";
 
 function App() {
   return (
@@ -88,6 +89,17 @@ function App() {
                 {" "}
                 <CustomersContextProvider>
                   <CustomersPage />
+                </CustomersContextProvider>{" "}
+              </Suspense>
+            }
+          />
+          <Route
+            path="/portfolio"
+            element={
+              <Suspense fallback={<Loading />}>
+                {" "}
+                <CustomersContextProvider>
+                  <Portfolio />
                 </CustomersContextProvider>{" "}
               </Suspense>
             }

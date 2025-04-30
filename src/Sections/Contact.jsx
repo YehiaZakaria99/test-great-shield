@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Contact() {
   return (
     <>
-      <section className="bg-navBg py-16 px-4 lg:px-32">
+      <section className="bg-navBg py-16 px-4 lg:px-32 overflow-hidden">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-bg mb-4" data-aos="fade-left">
             Get in Touch

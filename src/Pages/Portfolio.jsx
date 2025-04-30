@@ -1,50 +1,214 @@
-import React from "react";
-import manager from '/chairman/manager.webp'
-
-
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import manager from "/chairman/manager.webp";
+import Loading from "../Components/Loading/Loading";
 
 export default function Portfolio() {
+  const [isLoading, setIsLodaing] = useState(true);
+  useEffect(() => {
+    let x = 1;
+    const interval = setInterval(() => {
+      if (x < 2) {
+        setIsLodaing(true);
+        x = x + 1;
+      } else {
+        setIsLodaing(false);
+      }
+    }, 100);
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <>
-      <section className="py-16 px-4 lg:px-32 bg-navBg">
-        <div className="text-center mb-12">
-          <img
-            src={manager}
-            alt="Manager"
-            className="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg"
-          />
-          <h2 className="text-3xl font-bold text-mainColor">Eng. Mohamed Abdel Raouf</h2>
-          <p className="text-sky-600">Great Shield Manager</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-10">
-          <div>
-            <h3 className="text-xl font-semibold mb-2"></h3>
-            <p className="text-gray-700 leading-loose">
-              مهندس بخبرة أكثر من 20 عامًا في قطاع المقاولات، أسس الشركة وقادها
-              نحو العديد من النجاحات...
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <section className="pt-40 pb-16 bg-[#111] px-4 lg:px-32 text-gray-100 overflow-hidden">
+          {/* Header */}
+          <div
+            className="text-center mb-12"
+            data-aos="fade-left"
+            data-aos-duration="800"
+          >
+            <img
+              src={manager}
+              alt="Manager"
+              className="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg"
+            />
+            <h2 className="text-3xl font-bold text-mainColor">
+              Eng. Mohamed Abdel Raouf
+            </h2>
+            <p className="text-sky-400">
+              General Manager, Great Shield Contracting
             </p>
           </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-2">الإنجازات</h3>
-            <ul className="list-disc pl-6 text-gray-700 leading-loose">
-              <li>إنشاء أكثر من 50 مشروعًا في مصر والخليج</li>
-              <li>شراكات مع كبرى شركات المقاولات</li>
-              <li>جوائز تكريمية من جهات حكومية</li>
-            </ul>
+
+          {/* Bio + Highlights */}
+          <div className="grid md:grid-cols-2 gap-10">
+            <div>
+              <h3
+                className="text-2xl font-semibold text-mainColor mb-4"
+                data-aos="fade-right"
+                data-aos-duration="800"
+                data-aos-delay="800"
+              >
+                Biography
+              </h3>
+              <p
+                className="leading-loose"
+                data-aos="fade-right"
+                data-aos-delay="1600"
+              >
+                Eng. Mohamed Abdel Raouf is a distinguished leader in Egypt’s
+                construction and real estate development sector. With a
+                Bachelor's degree in Engineering, he has held several key
+                executive positions across leading companies. He served as
+                Chairman and Managing Director of Atlas General Contracting &
+                Real Estate Investments, as well as the Egyptian Joint Stock
+                Company for Contracting "Al-Abd" between 2002 and 2014.
+                <br />
+                <br />
+                Between 2014 and 2015, he was the Chairman of Al-Nasr Housing &
+                Development Company, and previously held the role of Executive
+                Technical Director at Al-Nasr for Civil Works from 1996 to 1997.
+                From March 30, 2017, to May 31, 2021, he served as a Board
+                Member at Al-Nasr for Civil Works.
+                <br />
+                <br />
+                He is also a former Board Member of the Egyptian Federation for
+                Construction and Building Contractors.
+              </p>
+            </div>
+
+            <div>
+              <h3
+                className="text-2xl font-semibold text-mainColor mb-4"
+                data-aos="fade-left"
+                data-aos-duration="800"
+                data-aos-delay="2400"
+              >
+                Career Highlights
+              </h3>
+              <ul
+                className="list-disc pl-6 leading-loose"
+                data-aos="fade-left"
+                data-aos-duration="800"
+                data-aos-delay="3000"
+              >
+                <li>
+                  Chairman & Managing Director, Atlas General Contracting & Real
+                  Estate Investments
+                </li>
+                <li>
+                  Chairman & Managing Director,{" "}
+                  <a
+                    className="text-sky-200 underline"
+                    href="https://www.alabdegypt.net/"
+                    target="_blank"
+                  >
+                    "Al-Abd"
+                  </a>{" "}
+                  (2002–2014)
+                </li>
+                <li>
+                  Chairman,{" "}
+                  <a
+                    className="text-sky-200 underline"
+                    href="https://www.el-nasrhousing.com/index.aspx"
+                    target="_blank"
+                  >
+                    "Al-Nasr Housing & Development"
+                  </a>{" "}
+                  (2014–2015)
+                </li>
+                <li>
+                  Board Member,{" "}
+                  <a
+                    className="text-sky-200 underline"
+                    href="https://www.facebook.com/nccweg"
+                    target="_blank"
+                  >
+                    "Al-Nasr for Civil Works"
+                  </a>{" "}
+                  (2017–2021)
+                </li>
+                <li>
+                  Executive Technical Director,{" "}
+                  <a
+                    className="text-sky-200 underline"
+                    href="https://www.facebook.com/nccweg"
+                    target="_blank"
+                  >
+                    "Al-Nasr for Civil Works"
+                  </a>{" "}
+                  (1996–1997)
+                </li>
+                <li>
+                  Member of the Board,{" "}
+                  <a
+                    className="text-sky-200 underline"
+                    href="https://www.tasheed.org/"
+                    target="_blank"
+                  >
+                    Egyptian Federation for Construction and Building
+                    Contractors
+                  </a>
+                </li>
+                <li>Holds a Bachelor's degree in Engineering</li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
+
+          {/* TIMELINE */}
+          <div className="mt-20" data-aos="fade-up">
+            <h3 className="text-2xl font-semibold text-mainColor mb-10 text-center">
+              Career Timeline
+            </h3>
+            <div className="border-l-2 border-mainColor pl-6 space-y-8">
+              <div>
+                <p className="text-sky-300 font-medium">1996 – 1997</p>
+                <p>Executive Technical Director, Al-Nasr for Civil Works</p>
+              </div>
+              <div>
+                <p className="text-sky-300 font-medium">2002 – 2014</p>
+                <p>
+                  Chairman & Managing Director, Atlas Contracting & "Al-Abd"
+                </p>
+              </div>
+              <div>
+                <p className="text-sky-300 font-medium">2014 – 2015</p>
+                <p>Chairman, Al-Nasr Housing & Development</p>
+              </div>
+              <div>
+                <p className="text-sky-300 font-medium">2017 – 2021</p>
+                <p>Board Member, Al-Nasr for Civil Works</p>
+              </div>
+              <div>
+                <p className="text-sky-300 font-medium">Ongoing</p>
+                <p>Chairman, Great Shield Construction</p>
+                <p>
+                  Board Member, Egyptian Federation for Construction and
+                  Building Contractors
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
     </>
   );
 }
-
-
-
-
-
-
-
 
 /* 
 

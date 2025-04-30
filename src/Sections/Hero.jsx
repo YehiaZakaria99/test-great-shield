@@ -2,6 +2,7 @@ import useNavigateToTop from "../Hooks/useNavigateToTop.js";
 import Aos from "aos";
 import { useEffect } from "react";
 import { FaArrowAltCircleDown } from "react-icons/fa";
+
 import { TypeAnimation } from "react-type-animation";
 
 // import { useNavigate } from "react-router-dom";

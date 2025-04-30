@@ -21,6 +21,7 @@ import ProjectsContextProvider from "./Context/ProjectsContext.jsx";
 import CustomersPage from "./Pages/CustomersPage.jsx";
 import CustomersContextProvider from "./Context/CustomersContext.jsx";
 import Portfolio from "./Pages/Portfolio.jsx";
+import Media from "./Pages/Media.jsx";
 
 function App() {
   return (
@@ -100,6 +101,17 @@ function App() {
                 {" "}
                 <CustomersContextProvider>
                   <Portfolio />
+                </CustomersContextProvider>{" "}
+              </Suspense>
+            }
+          />
+          <Route
+            path="/media"
+            element={
+              <Suspense fallback={<Loading />}>
+                {" "}
+                <CustomersContextProvider>
+                  <Media />
                 </CustomersContextProvider>{" "}
               </Suspense>
             }

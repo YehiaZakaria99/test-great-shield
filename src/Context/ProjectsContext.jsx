@@ -42,7 +42,7 @@ export default function ProjectsContextProvider({ children }) {
     {
       id: 0,
       title: "Construction Project of a Post Office Building in Qalyubia",
-      images: [img1proj1, img2proj1],
+      images: [img1proj1],
       owner: "The Military Production Company for Development Projects",
       consultant: "ECG",
       startDate: "",
@@ -123,7 +123,7 @@ export default function ProjectsContextProvider({ children }) {
       id: 4,
       title:
         "Project for the construction of a health center in Haggar El-Dahsa, Qena",
-      images: [img1proj5, img2proj5],
+      images: [img1proj5],
       owner: " Ministry of Health",
       consultant: "Perfect Engineering Consultancy",
       startDate: "  May 2023",
@@ -144,7 +144,7 @@ export default function ProjectsContextProvider({ children }) {
       id: 5,
       title:
         "Project for the construction of a Mercedes Benz Service Center in Ain Sokhna",
-      images: [img1proj6, img2proj6],
+      images: [img1proj6],
       owner: "Mercedes Benz Company",
       consultant: "Cairo Consult",
       startDate: "  May 2022",
@@ -165,7 +165,7 @@ export default function ProjectsContextProvider({ children }) {
       id: 6,
       title:
         "Project for the construction of a health center in Nagaa Al-Omda, Qena",
-      images: [img1proj7, img2proj7],
+      images: [img1proj7],
       owner: "Ministry of Health",
       consultant: "Perfect Engineering Consultancy",
       startDate: "July 2023",
@@ -185,7 +185,7 @@ export default function ProjectsContextProvider({ children }) {
     {
       id: 7,
       title: "Project for the construction of Al-Azhar Hotel in Ismailia",
-      images: [img1proj8, img2proj8],
+      images: [img1proj8],
       owner: " Al-Azhar Authority",
       consultant: "ECB Office",
       startDate: " June 27, 2021",

@@ -86,11 +86,11 @@ const Navbar = () => {
                 Manager 
               </NavLink>
               <NavLink
-                to="/blog"
+                to="/media"
                 className="block px-4 py-2 hover:text-mainColor transition whitespace-nowrap duration-300"
                 onClick={() => setIsDropdownOpen(false)}
               >
-                Lorem, ipsum.
+                Media
               </NavLink>
             </div>
           </div>
@@ -155,18 +155,18 @@ const Navbar = () => {
               Our Clients
             </NavLink>
             <NavLink
-              to="/careers"
+              to="/portfolio"
               className="block py-1 hover:text-mainColor transition duration-300"
               onClick={closeMenu}
             >
-              Lorem, ipsum.
+              Manager
             </NavLink>
             <NavLink
-              to="/blog"
+              to="/media"
               className="block py-1 hover:text-mainColor transition duration-300"
               onClick={closeMenu}
             >
-              Lorem, ipsum.
+              Media
             </NavLink>
           </div>
         </div>

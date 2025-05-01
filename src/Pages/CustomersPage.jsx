@@ -39,12 +39,15 @@ export default function CustomersPage() {
       ) : (
         <section className="pt-40 pb-16 bg-[#111] text-white min-h-screen overflow-hidden">
           <div className="container mx-auto text-center">
-            <h1
-              className="text-4xl font-bold mb-12 text-mainColor"
-              data-aos="fade-down"
-            >
-              Our Clients
-            </h1>
+            {/* Header */}
+            <section className="mb-24 px-4 text-center">
+              <h2
+                className="text-3xl md:text-4xl font-bold text-bg mb-4"
+                data-aos="fade-right"
+              >
+                Our Clients
+              </h2>
+            </section>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 items-center">
               {logos.map((logo, index) => (

@@ -185,17 +185,27 @@ export default function ServicesPage() {
       {isLoading ? (
         <Loading />
       ) : (
-        <section
-          className="pt-40 pb-16 bg-[#111] text-white min-h-screen overflow-hidden"
-        >
+        <section className="pt-40 pb-16 bg-[#111] text-white min-h-screen overflow-hidden">
           <div className="container mx-auto px-4">
-            <h2
-              className="text-4xl md:text-5xl font-bold text-center text-mainColor mb-16"
-              data-aos="fade-right"
-              data-aos-easing="ease-in-out"
-            >
-              Services
-            </h2>
+            {/* Header */}
+            <section className="mb-24 px-4 text-center">
+              <h2
+                className="text-3xl md:text-4xl font-bold text-bg mb-4"
+                data-aos="fade-right"
+                data-aos-easing="ease-in-out"
+              >
+                Services
+              </h2>
+              <p
+                className="text-gray-400 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed"
+                data-aos="fade-left"
+              >
+                As a leading general contractor in Egypt, Great Shield
+                Constructions provides a comprehensive range of integrated
+                services encompassing all stages of construction, from initial
+                design and planning through to execution and final delivery.
+              </p>
+            </section>
 
             {services.map((service, index) => (
               <ServicesPageCard service={service} key={index} />

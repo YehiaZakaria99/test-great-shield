@@ -69,21 +69,24 @@ public-key: OOlPmBj-KjzyftCSE
       ) : (
         <section className="pt-40 pb-16 bg-[#111] text-white">
           <div className="max-w-7xl mx-auto mb-24 px-4">
-            <h2
-              className="text-4xl md:text-5xl font-bold text-center text-mainColor mb-6"
-              data-aos="fade-right"
-              data-aos-easing="ease-in-out"
-            >
-              Contact Us
-            </h2>
-            <p
-              className="text-gray-300 text-center max-w-3xl mx-auto text-lg leading-relaxed mb-12"
-              data-aos="fade-left"
-              data-aos-easing="ease-in-out"
-            >
-              We'd love to hear from you. Fill in the form below and we'll get
-              back to you as soon as possible.
-            </p>
+            {/* Header */}
+            <section className="mb-24 px-4 text-center">
+              <h2
+                className="text-3xl md:text-4xl font-bold text-bg mb-4"
+                data-aos="fade-right"
+                data-aos-easing="ease-in-out"
+              >
+                Contact Us
+              </h2>
+              <p
+                className="text-gray-300 text-center max-w-3xl mx-auto text-lg leading-relaxed mb-12"
+                data-aos="fade-left"
+                data-aos-easing="ease-in-out"
+              >
+                We'd love to hear from you. Fill in the form below and we'll get
+                back to you as soon as possible.
+              </p>
+            </section>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {/* Map */}
@@ -199,10 +202,16 @@ public-key: OOlPmBj-KjzyftCSE
                 </span>
               </div>
               <div className="flex justify-center items-center gap-2">
-                <FaPhoneAlt /> <a href="tel:+20 123 456 7890"><span>+20 123 456 7890</span></a>
+                <FaPhoneAlt />{" "}
+                <a href="tel:+20 123 456 7890">
+                  <span>+20 123 456 7890</span>
+                </a>
               </div>
               <div className="flex justify-center items-center gap-2">
-                <FaEnvelope /> <a href="mailto:Info@greatshieldegypt.com"><span>Info@greatshieldegypt.com</span></a>
+                <FaEnvelope />{" "}
+                <a href="mailto:Info@greatshieldegypt.com">
+                  <span>Info@greatshieldegypt.com</span>
+                </a>
               </div>
             </div>
           </div>

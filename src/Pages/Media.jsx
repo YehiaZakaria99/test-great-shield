@@ -38,12 +38,15 @@ export default function Media() {
         <Loading />
       ) : (
         <section className="pt-40 pb-16 bg-[#111] px-4 overflow-hidden lg:px-32 text-gray-100">
-          <h2
-            className="text-4xl md:text-5xl font-bold text-center text-mainColor mb-12"
-            data-aos="fade-up"
-          >
-            Media Center
-          </h2>
+          {/* Header */}
+          <section className="mb-24 px-4 text-center">
+            <h2
+              className="text-3xl md:text-4xl font-bold text-bg mb-4"
+              data-aos="fade-up"
+            >
+              Media Center
+            </h2>
+          </section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mediaItems.map((item, index) => (

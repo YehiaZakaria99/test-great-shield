@@ -43,20 +43,18 @@ export default function Portfolio() {
           {/* Header */}
           <div
             className="text-center mb-12"
-            data-aos="fade-left"
             data-aos-duration="800"
           >
             <img
               src={manager}
               alt="Manager"
-              data-aos-delay="800"
               data-aos="zoom-in"
               className="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg"
             />
-            <h2 className="text-3xl font-bold text-mainColor">
+            <h2 className="md:text-3xl text-2xl font-bold text-mainColor" data-aos="fade-left">
               Eng. Mohamed Abdel Raouf
             </h2>
-            <p className="text-sky-400">General Manager</p>
+            <p className="text-sky-400" data-aos="fade-right">General Manager</p>
           </div>
 
           {/* Bio + Media */}
@@ -64,7 +62,7 @@ export default function Portfolio() {
             {/* Bio */}
             <div className="text-center">
               <h3
-                className="text-2xl font-semibold text-mainColor mb-4"
+                className="text-2xl font-semibold text-bg mb-4"
                 data-aos="fade-right"
               >
                 Biography
@@ -115,8 +113,8 @@ export default function Portfolio() {
           </div>
           {/* More Media */}
           <div
-            className="flex justify-center mt-12"
-            // data-aos="fade-up"
+            className="flex justify-center my-12"
+            data-aos="fade-up"
             data-aos-easing="ease-in-out"
           >
             <button

@@ -72,8 +72,7 @@ const Services = () => {
           >
             As a leading general contractor in Egypt, Great Shield Constructions
             provides a comprehensive range of integrated services encompassing
-            all stages of construction, from initial design and planning through
-            to execution and final delivery.
+            all stages of construction.
           </p>
         </div>
 

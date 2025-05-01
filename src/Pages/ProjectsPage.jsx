@@ -19,20 +19,23 @@ export default function ProjectsPage() {
     >
       <div className="container">
         <div className="">
-          <h2
-            className="text-4xl md:text-5xl font-bold text-center text-mainColor mb-2"
-            data-aos="fade-right"
-            data-aos-easing="ease-in-out"
-          >
-            Projects
-          </h2>
-          <p
-            className="text-gray-300 text-center max-w-3xl mx-auto text-lg leading-relaxed mb-12"
-            data-aos="fade-left"
-            data-aos-easing="ease-in-out"
-          >
-            Featured Construction Projects
-          </p>
+          {/* Header */}
+          <section className="mb-24 px-4 text-center">
+            <h2
+              className="text-3xl md:text-4xl font-bold text-bg mb-4"
+              data-aos="fade-right"
+              data-aos-easing="ease-in-out"
+            >
+              Projects
+            </h2>
+            <p
+              className="text-gray-300 text-center max-w-3xl mx-auto text-lg leading-relaxed mb-12"
+              data-aos="fade-left"
+              data-aos-easing="ease-in-out"
+            >
+              Featured Construction Projects
+            </p>
+          </section>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {projects.map((project, index) => (

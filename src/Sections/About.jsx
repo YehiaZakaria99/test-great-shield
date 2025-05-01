@@ -18,7 +18,7 @@ const about = [
     img: ourStandards,
     link: "/about/overview#standards-details",
   },
-  { title: "Our Message", img: ourMessage },
+  { title: "Our Message", img: ourMessage, link: "/about/leadership#leadership" },
 ];
 
 const About = () => {

@@ -101,7 +101,7 @@ With sincere appreciation,`,
   return (
     <div className="mb-24 text-center">
       <h2
-        className="text-4xl md:text-5xl font-bold text-bg mb-10"
+        className="text-3xl md:text-4xl font-bold text-bg mb-10"
         data-aos="fade-right"
       >
         Leadership
@@ -113,7 +113,7 @@ With sincere appreciation,`,
           data-aos="fade-up"
           className="hero-image-wrapper w-full flex justify-center"
         >
-          <div className="hero-image-container w-[calc(100vw-200px)] h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden rounded-xl transition-transform duration-1000 ease-in-out will-change-transform relative">
+          <div className="hero-image-container md:w-[calc(100vw-200px)] w-full  h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden rounded-xl transition-transform duration-1000 ease-in-out will-change-transform relative">
             <img src={team} alt="team" className="w-full h-full object-cover" />
             {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-tr from-mainColor/50 to-navBg/70 z-10"></div>
@@ -123,7 +123,7 @@ With sincere appreciation,`,
 
       <Teamwork />
 
-      <div className="grid sm:grid-cols-2 gap-8 max-w-5xl mx-auto my-10">
+      <div className="grid sm:grid-cols-2 gap-8 max-w-5xl mx-auto my-10" id="leadership">
         {leadershipData.map((person, index) => (
           <div
             onClick={() => openModal(person)}
@@ -135,7 +135,7 @@ With sincere appreciation,`,
             <img
               src={person.image}
               alt={person.name}
-              className="w-full h-64 object-cover rounded-xl mb-4 grayscale transition-all duration-300 group-hover:grayscale-0"
+              className="w-full h-64 object-cover rounded-xl mb-4 grayscale transition-all duration-300 group-hover:grayscale-0 object-left"
             />
             <h3 className="text-lg font-semibold text-gray-300">
               {person.name}
@@ -187,7 +187,7 @@ With sincere appreciation,`,
       >
         <button
           onClick={closeModal}
-          className="absolute top-0 right-0 md:top-4 md:right-4 text-gray-400 hover:text-red-500 transition z-10"
+          className="absolute top-0 right-0 md:top-1 md:right-1 text-gray-400 hover:text-red-500 transition z-10"
         >
           <FaTimes size={28} />
         </button>
@@ -200,7 +200,7 @@ With sincere appreciation,`,
             <img
               src={selectedPerson.image}
               alt={selectedPerson.name}
-              className="w-32 h-32 object-cover rounded-full mx-auto mb-4"
+              className="w-32 h-32 object-cover rounded-full mx-auto mb-4 object-left"
             />
             <h3 className="text-xl font-bold mb-1">{selectedPerson.name}</h3>
             <p className="text-sm text-gray-600 mb-4">{selectedPerson.title}</p>

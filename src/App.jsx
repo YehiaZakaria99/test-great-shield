@@ -9,7 +9,7 @@ import { lazy, Suspense } from "react";
 
 const Home = lazy(() => import("./Pages/Home.jsx"));
 const ContactPage = lazy(() => import("./Pages/ContactPage.jsx"));
-const AboutPage = lazy(() => import("./Pages/AboutPage.jsx"));
+const AboutPage = lazy(() => import("./Pages/AboutPage/AboutPage.jsx"));
 const ServicesPage = lazy(() => import("./Pages/ServicesPage.jsx"));
 const NotFound = lazy(() => import("./Pages/NotFound.jsx"));
 
@@ -22,6 +22,9 @@ import CustomersPage from "./Pages/CustomersPage.jsx";
 import CustomersContextProvider from "./Context/CustomersContext.jsx";
 import Portfolio from "./Pages/Portfolio.jsx";
 import Media from "./Pages/Media.jsx";
+import AboutOverview from "./Pages/AboutPage/AboutOverview.jsx";
+import Leadership from "./Pages/AboutPage/Leadership.jsx";
+import MediaContextProvider from "./Context/MediaContext.jsx";
 
 function App() {
   return (
@@ -47,15 +50,20 @@ function App() {
               </Suspense>
             }
           />
+          {/* About */}
           <Route
             path="/about"
             element={
               <Suspense fallback={<Loading />}>
                 {" "}
-                <AboutPage />{" "}
+                <AboutPage />
               </Suspense>
             }
-          />
+          >
+            <Route path="overview" element={<AboutOverview />} />
+            <Route path="leadership" element={<Leadership />} />
+          </Route>
+          {/* End About */}
           <Route
             path="/services"
             element={
@@ -99,9 +107,9 @@ function App() {
             element={
               <Suspense fallback={<Loading />}>
                 {" "}
-                <CustomersContextProvider>
+                <MediaContextProvider>
                   <Portfolio />
-                </CustomersContextProvider>{" "}
+                </MediaContextProvider>{" "}
               </Suspense>
             }
           />
@@ -110,9 +118,9 @@ function App() {
             element={
               <Suspense fallback={<Loading />}>
                 {" "}
-                <CustomersContextProvider>
+                <MediaContextProvider>
                   <Media />
-                </CustomersContextProvider>{" "}
+                </MediaContextProvider>{" "}
               </Suspense>
             }
           />

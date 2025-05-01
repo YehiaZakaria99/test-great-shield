@@ -49,7 +49,7 @@ export default function Projects() {
   const { projects } = useContext(ProjectsContext);
   const navigate = useNavigate();
   return (
-    <section className="pb-20 bg-navBg" id="projects">
+    <section className="py-20 bg-navBg overflow-hidden" id="projects">
       <div className="max-w-6xl mx-auto px-4">
         <div
           className="text-center mb-12"

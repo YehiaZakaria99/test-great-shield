@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import manager from "/chairman/manager.webp";
 import Loading from "../Components/Loading/Loading";
+import { MediaContext } from "../Context/MediaContext";
+import useNavigateToTop from "../Hooks/useNavigateToTop";
 
 export default function Portfolio() {
+  const goTo = useNavigateToTop();
   const [isLoading, setIsLodaing] = useState(true);
   useEffect(() => {
     let x = 1;
@@ -29,6 +32,8 @@ export default function Portfolio() {
     AOS.init({ duration: 1000 });
   }, []);
 
+  // media
+  const { mediaItems } = useContext(MediaContext);
   return (
     <>
       {isLoading ? (
@@ -44,133 +49,99 @@ export default function Portfolio() {
             <img
               src={manager}
               alt="Manager"
+              data-aos-delay="800"
+              data-aos="zoom-in"
               className="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg"
             />
             <h2 className="text-3xl font-bold text-mainColor">
               Eng. Mohamed Abdel Raouf
             </h2>
-            <p className="text-sky-400">
-              General Manager, Great Shield Contracting
-            </p>
+            <p className="text-sky-400">General Manager</p>
           </div>
 
-          {/* Bio + Highlights */}
-          <div className="grid md:grid-cols-2 gap-10">
-            <div>
+          {/* Bio + Media */}
+          <div className="grid md:grid-cols-1 gap-10">
+            {/* Bio */}
+            <div className="text-center">
               <h3
                 className="text-2xl font-semibold text-mainColor mb-4"
                 data-aos="fade-right"
-                data-aos-duration="800"
-                data-aos-delay="800"
               >
                 Biography
               </h3>
-              <p
-                className="leading-loose"
-                data-aos="fade-right"
-                data-aos-delay="1600"
-              >
-                Eng. Mohamed Abdel Raouf is a distinguished leader in Egypt’s
-                construction and real estate development sector. With a
-                Bachelor's degree in Engineering, he has held several key
-                executive positions across leading companies. He served as
-                Chairman and Managing Director of Atlas General Contracting &
-                Real Estate Investments, as well as the Egyptian Joint Stock
-                Company for Contracting "Al-Abd" between 2002 and 2014.
+              <p className="leading-loose" data-aos="fade-left">
+                Eng. Mohamed Abdel Raouf is a board member of the Egyptian
+                Federation for Construction and Building Contractors. He is
+                known for his active participation in developing the
+                construction and building sector in Egypt. He has spoken on
+                several occasions about the state's efforts to eliminate
+                informal settlements and unplanned hazardous areas. He also
+                highlighted the role of the "Decent Life" initiative in
+                improving infrastructure and developing rural areas.
                 <br />
-                <br />
-                Between 2014 and 2015, he was the Chairman of Al-Nasr Housing &
-                Development Company, and previously held the role of Executive
-                Technical Director at Al-Nasr for Civil Works from 1996 to 1997.
-                From March 30, 2017, to May 31, 2021, he served as a Board
-                Member at Al-Nasr for Civil Works.
-                <br />
-                <br />
-                He is also a former Board Member of the Egyptian Federation for
-                Construction and Building Contractors.
               </p>
             </div>
+            {/* Media */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 py-12">
+              {mediaItems.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-white text-gray-800 rounded-lg shadow-lg overflow-hidden"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
+                  {item.type === "video" ? (
+                    <iframe
+                      className="w-full h-56"
+                      src={item.url}
+                      title={item.title}
+                      allowFullScreen
+                    ></iframe>
+                  ) : (
+                    <div className="h-56 bg-gray-200 flex items-center justify-center text-mainColor text-xl font-bold">
+                      News
+                    </div>
+                  )}
 
-            <div>
-              <h3
-                className="text-2xl font-semibold text-mainColor mb-4"
-                data-aos="fade-left"
-                data-aos-duration="800"
-                data-aos-delay="2400"
-              >
-                Career Highlights
-              </h3>
-              <ul
-                className="list-disc pl-6 leading-loose"
-                data-aos="fade-left"
-                data-aos-duration="800"
-                data-aos-delay="3000"
-              >
-                <li>
-                  Chairman & Managing Director, Atlas General Contracting & Real
-                  Estate Investments
-                </li>
-                <li>
-                  Chairman & Managing Director,{" "}
-                  <a
-                    className="text-sky-200 underline"
-                    href="https://www.alabdegypt.net/"
-                    target="_blank"
-                  >
-                    "Al-Abd"
-                  </a>{" "}
-                  (2002–2014)
-                </li>
-                <li>
-                  Chairman,{" "}
-                  <a
-                    className="text-sky-200 underline"
-                    href="https://www.el-nasrhousing.com/index.aspx"
-                    target="_blank"
-                  >
-                    "Al-Nasr Housing & Development"
-                  </a>{" "}
-                  (2014–2015)
-                </li>
-                <li>
-                  Board Member,{" "}
-                  <a
-                    className="text-sky-200 underline"
-                    href="https://www.facebook.com/nccweg"
-                    target="_blank"
-                  >
-                    "Al-Nasr for Civil Works"
-                  </a>{" "}
-                  (2017–2021)
-                </li>
-                <li>
-                  Executive Technical Director,{" "}
-                  <a
-                    className="text-sky-200 underline"
-                    href="https://www.facebook.com/nccweg"
-                    target="_blank"
-                  >
-                    "Al-Nasr for Civil Works"
-                  </a>{" "}
-                  (1996–1997)
-                </li>
-                <li>
-                  Member of the Board,{" "}
-                  <a
-                    className="text-sky-200 underline"
-                    href="https://www.tasheed.org/"
-                    target="_blank"
-                  >
-                    Egyptian Federation for Construction and Building
-                    Contractors
-                  </a>
-                </li>
-                <li>Holds a Bachelor's degree in Engineering</li>
-              </ul>
+                  <div className="p-5">
+                    <h3 className="font-semibold text-lg text-mainColor mb-2">
+                      {item.title}
+                    </h3>
+                    {/* <p className="text-gray-600 text-sm">{item.description}</p> */}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+          {/* More Media */}
+          <div
+            className="flex justify-center mt-12"
+            // data-aos="fade-up"
+            data-aos-easing="ease-in-out"
+          >
+            <button
+              onClick={() => goTo("/media")}
+              className="inline-flex items-center group px-5 py-3 border-2 border-mainColor text-mainColor hover:bg-mainColor hover:text-navBg transition duration-300 rounded-lg"
+            >
+              All Media
+              <svg
+                className="w-4 h-4 ms-2 rtl:rotate-180 group-hover:animate-bounceX duration-300"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </button>
+          </div>
 
-          {/* TIMELINE */}
+          {/* 
           <div className="mt-20" data-aos="fade-up">
             <h3 className="text-2xl font-semibold text-mainColor mb-10 text-center">
               Career Timeline
@@ -203,7 +174,7 @@ export default function Portfolio() {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </section>
       )}
     </>

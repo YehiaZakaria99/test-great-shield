@@ -9,6 +9,8 @@ import buildingConstruction from "/servicesSec/Building-Construction.webp";
 import engineeringDesign from "/servicesSec/Engineering-Design.webp";
 import maintenanceWorks from "/servicesSec/Maintenance-Works.webp";
 import projectManagement from "/servicesSec/Project-Management.webp";
+import AnimatedSVG from './../Components/AnimatedSVG/AnimatedSVG';
+import MilesAheadIcon from "../Components/AnimatedSVG/MilesAheadIcon .jsx";
 
 // Data
 const services = [
@@ -50,11 +52,9 @@ const Services = () => {
   }, []);
 
   return (
-    <section id="services" className="py-16 bg-navBg text-white">
+    <section id="services" className="py-16 bg-navBg text-white overflow-hidden">
       <div className="container max-w-7xl mx-auto px-4">
-        <div
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <h2
             className="text-3xl md:text-4xl font-bold text-bg"
             data-aos="fade-right"
@@ -62,6 +62,9 @@ const Services = () => {
           >
             Our Services
           </h2>
+        {/* <AnimatedSVG /> */}
+        {/* <MilesAheadIcon /> */}
+
           <p
             className="text-lg leading-relaxed max-w-3xl text-gray-100 mx-auto"
             data-aos="fade-left"

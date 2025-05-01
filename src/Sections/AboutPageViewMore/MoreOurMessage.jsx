@@ -77,6 +77,7 @@ With sincere appreciation,`,
 
   return (
     <div className="w-full">
+      
       <Slider {...settings}>
         {messages.map((msg, index) => (
           <div key={index} className="px-2 py-4">
@@ -91,7 +92,7 @@ With sincere appreciation,`,
                 <h5 className="text-2xl font-bold text-gray-800 mb-3">
                   {msg.title}
                 </h5>
-                <p className="text-gray-600 text-sm md:text-base leading-7 whitespace-pre-line max-h-52 overflow-y-auto custom-scrollbar pr-2">
+                <p className="text-gray-600 text-sm md:text-base leading-7 whitespace-pre-line  custom-scrollbar pr-2">
                   {msg.text}
                 </p>
                 <div className="mt-4">

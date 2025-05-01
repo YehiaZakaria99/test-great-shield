@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Loading from "../Components/Loading/Loading";
+import { MediaContext } from "../Context/MediaContext";
 
 export default function Media() {
   const [isLoading, setIsLodaing] = useState(true);
@@ -28,46 +29,8 @@ export default function Media() {
     AOS.init({ duration: 1000 });
   }, []);
 
-  const mediaItems = [
-    {
-      type: "video",
-      title: "م.محمد عبد الرؤوف عضو مجلس الاتحاد المصري لمقاولي التشييد والبناء يوضح أسباب تراجع أسعار الحديد",
-      description:
-        "Discussion on the future of real estate investment in Egypt.",
-      url: "https://www.youtube.com/embed/9InWBVDoecw",
-    },
-    {
-      type: "video",
-      title: "م. محمد عبد الرؤوف يوضح أهم المحاور التي تعمل عليها الحكومة المصرية لدعم القطاع الخاص",
-      description: "Highlights of our recent construction milestones.",
-      url: "https://www.youtube.com/embed/--KoK4roJlE",
-    },
-    {
-      type: "video",
-      title: "لقاء المهندس محمد عبد الرؤوف مع  قناه CBC extra بتاريخ 6/6/2015",
-      description: "Highlights of our recent construction milestones.",
-      url: "https://www.youtube.com/embed/KIFwltbCYe0",
-    },
-    {
-      type: "video",
-      title: "تعمير-م/محمد عبد الرؤوف يوضح جهود الحكومة لدعم فرص شركات المقاولات المصرية في مشروعات إعادة الإعمار",
-      description: "Highlights of our recent construction milestones.",
-      url: "https://www.youtube.com/embed/3FXoRUyJqdg",
-    },
-    // {
-    //   type: "news",
-    //   title: "Great Shield Wins Mega Project Contract",
-    //   description:
-    //     "Awarded the development of a major governmental housing compound.",
-    // },
-    // {
-    //   type: "news",
-    //   title: "CEO Attends Arab Contractors Conference",
-    //   description:
-    //     "A key voice in regional construction industry collaboration.",
-    // },
-    // Add more items as needed
-  ];
+  // data
+  const { mediaItems } = useContext(MediaContext);
 
   return (
     <>
@@ -117,9 +80,6 @@ export default function Media() {
     </>
   );
 }
-
-
-
 
 /* 
 <iframe width="610" height="488" src="https://www.youtube.com/embed/KIFwltbCYe0" title="لقاء المهندس محمد عبد الرؤوف مع  قناه CBC extra بتاريخ 6/6/2015" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -11,12 +11,12 @@ import useNavigateToTop from "../Hooks/useNavigateToTop.js";
 
 // Data
 const about = [
-  { title: "Our Vision", img: ourVision },
-  { title: "Our Mission", img: ourMissoin },
+  { title: "Our Vision", img: ourVision, link: "/about/overview#vision-details" },
+  { title: "Our Mission", img: ourMissoin, link: "/about/overview#mission-details" },
   {
     title: "Our Standards",
     img: ourStandards,
-    link: "/about#standards-details",
+    link: "/about/overview#standards-details",
   },
   { title: "Our Message", img: ourMessage },
 ];
@@ -31,11 +31,9 @@ const About = () => {
     };
   }, []);
   return (
-    <section id="about" className="py-16 bg-navBg text-white">
+    <section id="about" className="py-16 bg-navBg text-white overflow-hidden">
       <div className="container max-w-7xl mx-auto px-4 text-center">
-        <div
-          className=" mb-12 "
-        >
+        <div className=" mb-12 ">
           <h2
             className="text-3xl md:text-4xl font-bold text-bg"
             data-aos="fade-left"
@@ -56,7 +54,7 @@ const About = () => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-5">
-          {about.map(({ title, img }, index) => (
+          {about.map(({ title, img, link }, index) => (
             <div key={index}>
               <div
                 key={index}
@@ -64,13 +62,13 @@ const About = () => {
                 data-aos-easing="ease-in-out"
                 data-aos-delay={index * 200}
               >
-                <AboutCard title={title} img={img} />
+                <AboutCard title={title} img={img} link={link} />
               </div>
             </div>
           ))}
         </div>
 
-        <div
+        {/* <div
           className="flex justify-center mt-12"
           data-aos="fade-up"
           data-aos-easing="ease-in-out"
@@ -95,7 +93,7 @@ const About = () => {
               />
             </svg>
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -18,7 +18,7 @@ export default function Hero() {
 
   return (
     <section
-      className="h-screen hero-sec  bg-cover  relative overflow-x-hidden"
+      className="h-screen hero-sec  bg-cover  relative overflow-hidden"
       // style={{
       //   // backgroundImage: 'url("/hero/bgHeroMobile.webp")',
       // }}

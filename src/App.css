@@ -11,12 +11,18 @@
 }
 
 /* Gradiant Text */
-.text-bg{
+.text-bg {
+  background: linear-gradient(
+    270deg,
+    var(--main-color) 0%,
+
+    #fff 100%
+  );
   background: linear-gradient(
     270deg,
     var(--main-color) 0%,
     #f6c3a9 50%,
-    #fff 100%
+    #8ed8f8 100%
   );
   -webkit-background-clip: text;
   -o-background-clip: text;
@@ -64,9 +70,8 @@ button {
     background-position: right;
   }
   @media (width > 576px) {
-    background-image: url('/hero/bgHero.webp');
+    background-image: url("/hero/bgHero.webp");
     background-position: top;
   }
 }
-
 

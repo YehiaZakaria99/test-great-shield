@@ -1,136 +1,87 @@
-import Aos from "aos";
-import { useState, useEffect, useRef, useCallback } from "react";
 import { FaArrowRight, FaTimes } from "react-icons/fa";
 
-export default function AboutPageCard({ id, title, text, img, moreContent }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [showModalClass, setShowModalClass] = useState(false);
-  const modalRef = useRef();
-
-  const openModal = () => {
-    setIsModalOpen(true);
-    setTimeout(() => setShowModalClass(true), 10);
-  };
-
-  const closeModal = () => {
-    setShowModalClass(false);
-    setTimeout(() => {
-      setIsModalOpen(false);
-    }, 300);
-  };
-
-  const handleClickOutside = useCallback((e) => {
-    if (modalRef.current && !modalRef.current.contains(e.target)) {
-      closeModal();
-    }
-  }, []);
-
-  const handleEscape = useCallback((e) => {
-    if (e.key === "Escape") {
-      closeModal();
-    }
-  }, []);
-
-  useEffect(() => {
-    if (isModalOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-      document.addEventListener("keydown", handleEscape);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("keydown", handleEscape);
-    };
-  }, [isModalOpen, handleClickOutside, handleEscape]);
-
+const AboutPageCard = ({
+  dataAos,
+  id,
+  img,
+  title,
+  text,
+  moreContent,
+  openModal,
+  closeModal,
+  isModalOpen,
+  modalRef,
+  showModalClass,
+}) => {
   return (
     <div
-      data-aos="fade-up"
-      data-aos-easing="ease-in-out"
-      className="mb-24 flex flex-col gap-8 items-center text-white"
       id={id}
+      data-aos={dataAos}
+      className="w-full flex flex-col md:flex-row items-center justify-center gap-10 px-4 max-w-7xl mx-auto"
     >
-      {/* Content */}
-      <div className="flex flex-col md:flex-row items-center gap-8 w-full">
-        <div className="w-full md:w-1/2 max-w-md">
-          <img
-            src={img}
-            alt={title}
-            className="rounded-xl shadow-xl w-full h-[250px] object-cover"
-          />
-        </div>
+      {/* Image */}
+      <div className="w-full md:w-1/2">
+        <img
+          data-aos="zoom-in"
+          src={img}
+          alt={title}
+          className="rounded-3xl shadow-2xl w-full h-[200px] sm:h-[300px] md:h-[400px] object-cover transition-transform duration-500 hover:scale-105"
+        />
+      </div>
 
-        <div className="w-full md:w-1/2">
-          <h3 className="text-3xl font-bold text-sky-400 mb-4">{title}</h3>
-          <p className="text-gray-300 text-lg leading-relaxed">{text}</p>
+        {/* Content */}
+        <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left space-y-4">
+          <h3 className="text-3xl md:text-4xl font-bold text-sky-400">{title}</h3>
+          <p className="text-gray-300 text-lg leading-relaxed">{text.split(" ", 8).join(" ")}...</p>
 
-          {moreContent && (
+           
             <button
-              onClick={() => openModal()}
-              className="mt-6 gap-2 inline-flex items-center group outline-none px-3 py-2 text-sm font-medium border-2 border-mainColor  text-mainColor hover:bg-mainColor hover:text-navBg transition-all duration-300 rounded-lg"
+              onClick={openModal}
+              className="mt-4 inline-flex items-center gap-2 self-center md:self-start px-5 py-2 rounded-xl border-2 border-mainColor text-mainColor hover:bg-mainColor hover:text-navBg transition-all duration-300 group"
             >
               View More
-              <FaArrowRight className="transition-all group-hover:animate-bounceX duration-75" />
+              <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
             </button>
-          )}
+          
         </div>
-      </div>
+
       {/* Modal */}
       {isModalOpen && (
         <div
-          className={`fixed inset-0 z-50 bg-[rgba(0_0_0_/_0.2)] backdrop-blur-sm flex items-center justify-center p-4 transition-all duration-300 ${
+          className={`fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 transition-all duration-500 ${
             showModalClass ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
         >
           <div
             ref={modalRef}
-            className={`relative bg-[#222] w-full max-w-6xl rounded-2xl p-4 sm:p-6 md:p-10 shadow-2xl transform transition-all duration-300 ${
-              showModalClass ? "scale-100 opacity-100" : "scale-95 opacity-0"
+            className={`relative bg-[#1f1f1f] w-full max-w-5xl rounded-3xl p-6 md:p-10 shadow-2xl transition-all duration-500 transform ${
+              showModalClass
+                ? "scale-100 opacity-100 translate-y-0"
+                : "scale-95 opacity-0 translate-y-8"
             } max-h-[95vh] overflow-y-auto custom-scrollbar flex flex-col`}
           >
+            {/* Close Button */}
             <button
-              className="absolute top-6 right-6 text-gray-400 hover:text-red-500 transition z-10"
+              className="absolute top-0 right-0 md:top-4 md:right-4 text-gray-400 hover:text-red-500 transition z-10"
               onClick={closeModal}
             >
               <FaTimes size={28} />
             </button>
 
+            {/* Title */}
             <h4 className="text-3xl font-bold text-orange-400 mb-8 text-center">
               {title}
             </h4>
 
-            <div className="flex-1">{moreContent}</div>
+            {/* Modal Content */}
+            <div className="text-gray-200 text-lg leading-relaxed">
+              {moreContent}
+            </div>
           </div>
         </div>
       )}
     </div>
   );
-}
+};
 
-/* 
-
-
-    
-
-*/
-
-/* 
-
-{isModalOpen && (
-  <div
-    className={`fixed inset-0 z-50 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center px-4 py-2 md:py-6 overflow-y-auto transition-all duration-300 ${
-      showModalClass ? "opacity-100" : "opacity-0"
-    }`}
-  >
-    <div
-      ref={modalRef}
-      className={`bg-[#222] w-full max-w-5xl rounded-2xl p-4 sm:p-6 md:p-10 shadow-2xl transform transition-all duration-300 ${
-        showModalClass ? "scale-100 opacity-100" : "scale-95 opacity-0"
-      }`}
-    >
-      { المحتوى هنا }
-      </div>
-      </div>
-    )}
-    
-*/
+export default AboutPageCard;

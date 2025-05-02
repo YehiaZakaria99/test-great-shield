@@ -203,8 +203,8 @@ public-key: OOlPmBj-KjzyftCSE
               </div>
               <div className="flex justify-center items-center gap-2">
                 <FaPhoneAlt />{" "}
-                <a href="tel:+20 123 456 7890">
-                  <span>+20 123 456 7890</span>
+                <a href="tel:+201040391955">
+                  <span>+201040391955</span>
                 </a>
               </div>
               <div className="flex justify-center items-center gap-2">

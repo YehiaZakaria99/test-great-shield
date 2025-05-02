@@ -37,8 +37,8 @@ export default function Contact() {
             </div>
             <div className="flex items-center gap-3 text-gray-200">
               <FaPhoneAlt />{" "}
-              <a href="tel:+20 123 456 7890">
-                <span>+20 123 456 7890</span>
+              <a href="tel:+201040391955">
+                <span>+201040391955</span>
               </a>
             </div>
             <div className="flex items-center gap-3 text-gray-200">

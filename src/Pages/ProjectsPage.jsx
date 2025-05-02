@@ -6,7 +6,7 @@ import Aos from "aos";
 export default function ProjectsPage() {
   const { projects } = useContext(ProjectsContext);
   useEffect(() => {
-    Aos.init({ duration: 800 });
+    Aos.init({ duration: 1000 });
 
     return () => {
       Aos.refreshHard();
@@ -14,7 +14,7 @@ export default function ProjectsPage() {
   }, []);
   return (
     <section
-      className="pt-40 pb-40 bg-[#111] text-white min-h-screen overflow-hidden"
+      className="pt-40 pb-16 bg-[#111] text-white min-h-screen overflow-hidden"
       id=""
     >
       <div className="container">
@@ -42,7 +42,7 @@ export default function ProjectsPage() {
               <div
                 key={index}
                 data-aos="zoom-in"
-                data-aos-delay={index * 100}
+                // data-aos-delay={index * 100}
                 // data-aos-easing="linear"
               >
                 <ProjectsPageCard index={index} project={project} />

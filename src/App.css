@@ -15,12 +15,6 @@
   background: linear-gradient(
     270deg,
     var(--main-color) 0%,
-
-    #fff 100%
-  );
-  background: linear-gradient(
-    270deg,
-    var(--main-color) 0%,
     #f6c3a9 50%,
     #8ed8f8 100%
   );
@@ -40,7 +34,7 @@
 
 /* Carousel */
 
-.slick-dots{
+.slick-dots {
   position: relative;
   margin-top: -30px;
 }
@@ -68,13 +62,11 @@ button {
   }
 }
 
-
 /* hero */
 .hero-sec {
   @media (width <= 576px) {
     background-image: url(/hero/bgHeroMobile.webp);
     background-position: right;
-    
   }
   @media (width > 576px) {
     background-image: url("/hero/bgHero.webp");
@@ -82,3 +74,23 @@ button {
   }
 }
 
+/* teamworkCard */
+
+.special-border {
+  border-image: linear-gradient(
+      to right,
+      #8ed8f8 0%,
+      #f6c3a9 50%,
+      var(--main-color) 100%
+    )
+    1;
+  @media (width > 576px) {
+    border-image: linear-gradient(
+        to bottom,
+        #8ed8f8 0%,
+        #f6c3a9 50%,
+        var(--main-color) 100%
+      )
+      1;
+  }
+}

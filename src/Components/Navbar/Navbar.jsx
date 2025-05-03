@@ -101,6 +101,13 @@ const Navbar = () => {
           >
             Projects
           </NavLink>
+          {/* Projects */}
+          <NavLink
+            to="/landscapes"
+            className="hover:text-mainColor transition duration-300"
+          >
+            Landscapes
+          </NavLink>
 
           {/* Contact */}
           <NavLink
@@ -233,6 +240,14 @@ const Navbar = () => {
           className="block py-2 hover:text-mainColor transition duration-300"
         >
           Projects
+        </NavLink>
+        {/* Projects */}
+        <NavLink
+          to="/landscapes"
+          onClick={closeMenu}
+          className="block py-2 hover:text-mainColor transition duration-300"
+        >
+          Landscapes
         </NavLink>
 
         {/* Contact */}

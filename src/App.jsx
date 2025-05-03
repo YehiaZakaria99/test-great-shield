@@ -25,12 +25,14 @@ import Media from "./Pages/Media.jsx";
 import AboutOverview from "./Pages/AboutPage/AboutOverview.jsx";
 import Leadership from "./Pages/AboutPage/Leadership.jsx";
 import MediaContextProvider from "./Context/MediaContext.jsx";
+import LandscapesPage from "./Pages/LandscapesPage.jsx";
+import LandscapesContextProvider from "./Context/LandscapesContext.jsx";
 
 function App() {
   return (
     <>
       <Navbar />
-      <ProjectsContextProvider>
+      
         <Routes>
           <Route
             path="/"
@@ -70,12 +72,27 @@ function App() {
               </Suspense>
             }
           />
+
           <Route
             path="/projects"
             element={
               <Suspense fallback={<Loading />}>
                 {" "}
+              <ProjectsContextProvider>
                 <ProjectsPage />{" "}
+                </ProjectsContextProvider>
+              </Suspense>
+            }
+          />
+          <Route
+            path="/landscapes"
+            element={
+              <Suspense fallback={<Loading />}>
+                {" "}
+                <LandscapesContextProvider>
+                <LandscapesPage />{" "}
+
+                </LandscapesContextProvider>
               </Suspense>
             }
           />
@@ -128,7 +145,6 @@ function App() {
             }
           />
         </Routes>
-      </ProjectsContextProvider>
       {/* <Footer /> */}
     </>
   );

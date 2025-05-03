@@ -7,10 +7,11 @@ import "aos/dist/aos.css";
 import Customers from "./../Sections/Customers";
 import CustomersContextProvider from "../Context/CustomersContext.jsx";
 import Contact from "../Sections/Contact.jsx";
-import LandscapeContextProvider from "../Context/LandscapeContext.jsx";
-import Landscape from "./../Sections/Landscape";
 import { useEffect, useState } from "react";
 import Loading from "../Components/Loading/Loading.jsx";
+import Landscapes from "../Sections/Landscapes.jsx";
+import LandscapesContextProvider from "../Context/LandscapesContext.jsx";
+import ProjectsContextProvider from "../Context/ProjectsContext.jsx";
 
 const Home = () => {
   const [isLoading, setIsLodaing] = useState(false);
@@ -37,14 +38,16 @@ const Home = () => {
       {isLoading ? (
         <Loading />
       ) : (
-        <main className="overflow-hidden">
+        <main className="overflow-hidden bg-navBg">
           <Hero />
           <Services />
           <About />
-          <Projects />
-          <LandscapeContextProvider>
-            <Landscape />
-          </LandscapeContextProvider>
+          <ProjectsContextProvider>
+            <Projects />
+          </ProjectsContextProvider>
+          <LandscapesContextProvider>
+            <Landscapes />
+          </LandscapesContextProvider>
           <CustomersContextProvider>
             <Customers />
           </CustomersContextProvider>

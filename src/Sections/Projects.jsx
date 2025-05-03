@@ -61,7 +61,7 @@ export default function Projects() {
         </div>
         <div className="my-8">
           <Slider ref={sliderRef} {...settings}>
-            {projects.map((project, index) => (
+            {projects.slice(0,10).map((project, index) => (
               <div
                 key={index}
                 className=" px-6 py-3"

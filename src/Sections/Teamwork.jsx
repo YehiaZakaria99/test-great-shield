@@ -33,9 +33,9 @@ const Teamwork = () => {
         
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 my-10">
         {cards.map((card, index) => (
-          <div key={index} className="flex flex-col items-center text-center">
+          <div key={index} className={`flex flex-col items-center text-center px-3 py-3 ${index == 1 && "border-y-2 md:border-x-2 md:border-y-0 special-border "} `}>
             {card.icon}
-            <h3 className="text-xl font-semibold mb-3 mt-4">{card.title}</h3>
+            <h3 className="text-xl font-semibold mb-3 mt-4 text-sky-400">{card.title}</h3>
             <p className="text-gray-300">{card.text}</p>
           </div>
         ))}

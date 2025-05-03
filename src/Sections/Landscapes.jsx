@@ -2,11 +2,11 @@ import Slider from "react-slick";
 import { useContext, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Aos from "aos";
-import { LandscapeContext } from "../Context/LandscapeContext";
+import { LandscapesContext } from "../Context/LandscapesContext";
+import { Link } from "react-router-dom";
 
-export default function Landscape() {
-  const { landscapes } = useContext(LandscapeContext);
-  console.log(landscapes);
+export default function Landscapes() {
+  const { landscapes } = useContext(LandscapesContext);
   useEffect(() => {
     Aos.init({ duration: 800 });
 
@@ -76,9 +76,9 @@ export default function Landscape() {
                 />
                 <div className="text-center md:text-left md:w-1/2">
                   <h3 className="text-2xl font-semibold text-mainColor mb-2">
-                    landscape.title
+                    {landscape.title}
                   </h3>
-                  <p className="mb-4 text-gray-100">landscape.location</p>
+                  <p className="mb-4 text-gray-100">{landscape.city}</p>
 
                   <button
                     onClick={() => {
@@ -95,7 +95,28 @@ export default function Landscape() {
           ))}
         </Slider>
       </div>
+      <div className="py-10 text-center" data-aos="fade-up">
+        <Link
+          to={"/landscapes"}
+          className="inline-flex items-center group px-5 py-3 border-2 border-mainColor text-mainColor hover:bg-mainColor hover:text-navBg transition duration-300 rounded-lg"
+        >
+          More Details
+          <svg
+            className="w-4 h-4 ms-2 rtl:rotate-180 group-hover:animate-bounceX duration-300"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </Link>
+      </div>
     </section>
   );
-  return <></>;
 }

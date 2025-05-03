@@ -1,13 +1,9 @@
 import { useEffect, useState } from "react";
-import AboutPageCard from "../../Components/AboutPageCard/AboutPageCard.jsx";
 import Loading from "../../Components/Loading/Loading.jsx";
-// import MoreOurMessage from "../../Sections/AboutPageViewMore/MoreOurMessage.jsx";
-// import AboutOverview from "../../Sections/AboutOverview.jsx";
 import { Outlet } from "react-router-dom";
 
 // imgs
 
-import ourMessage from "/aboutSec/Our-Message.webp";
 import Aos from "aos";
 
 export default function AboutPage() {

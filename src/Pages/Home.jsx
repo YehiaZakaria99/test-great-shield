@@ -7,18 +7,25 @@ import "aos/dist/aos.css";
 import Customers from "./../Sections/Customers";
 import CustomersContextProvider from "../Context/CustomersContext.jsx";
 import Contact from "../Sections/Contact.jsx";
+import LandscapeContextProvider from "../Context/LandscapeContext.jsx";
+import Landscape from "./../Sections/Landscape";
 
 const Home = () => {
   return (
     <>
-      <Hero />
-      <Services />
-      <About />
-      <Projects />
-      <CustomersContextProvider>
-        <Customers />
-      </CustomersContextProvider>
-      <Contact />
+      <main className="overflow-hidden">
+        <Hero />
+        <Services />
+        <About />
+        <Projects />
+        <CustomersContextProvider>
+          <Customers />
+        </CustomersContextProvider>
+        <Contact />
+        <LandscapeContextProvider>
+          <Landscape />
+        </LandscapeContextProvider>
+      </main>
     </>
   );
 };

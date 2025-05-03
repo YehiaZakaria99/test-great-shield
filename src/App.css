@@ -40,6 +40,10 @@
 
 /* Carousel */
 
+.slick-dots{
+  position: relative;
+  margin-top: -30px;
+}
 .slick-dots li.slick-active button:before,
 .slick-dots li button:before {
   color: #fff;

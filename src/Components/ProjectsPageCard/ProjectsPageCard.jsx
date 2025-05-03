@@ -25,7 +25,7 @@ export default function ProjectsPageCard({ project, index }) {
           <button
             onClick={() => {
               sessionStorage.setItem("lastViewedProject", index);
-              navigate(`/projectDetails/${project.id}`);
+              navigate(`/projectDetails/${index}`);
             }}
             className="mt-4 inline-block px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-md"
           >

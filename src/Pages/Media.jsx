@@ -53,8 +53,7 @@ export default function Media() {
               <div
                 key={index}
                 className="bg-white text-gray-800 rounded-lg shadow-lg overflow-hidden"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
+                data-aos={index % 2 == 0 ? "zoom-out" : "zoom-in"}
               >
                 {item.type === "video" ? (
                   <iframe

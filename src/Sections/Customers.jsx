@@ -36,7 +36,7 @@ export default function Customers() {
             to={'/customers'}
             className="inline-flex items-center group px-5 py-3 border-2 border-mainColor text-mainColor hover:bg-mainColor hover:text-navBg transition duration-300 rounded-lg"
           >
-            View All Clients
+            All Clients
             <svg
               className="w-4 h-4 ms-2 rtl:rotate-180 group-hover:animate-bounceX duration-300"
               xmlns="http://www.w3.org/2000/svg"

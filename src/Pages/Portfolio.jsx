@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import manager from "/chairman/manager.webp";
+import manager from "/leadership/chairman.webp";
 import Loading from "../Components/Loading/Loading";
 import { MediaContext } from "../Context/MediaContext";
 import useNavigateToTop from "../Hooks/useNavigateToTop";
@@ -43,13 +43,13 @@ export default function Portfolio() {
           {/* Header */}
           <div
             className="text-center mb-12"
-            data-aos-duration="800"
+
           >
             <img
               src={manager}
               alt="Manager"
               data-aos="zoom-in"
-              className="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg"
+              className="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover object-left"
             />
             <h2 className="md:text-3xl text-2xl font-bold text-mainColor" data-aos="fade-left">
               Eng. Mohamed Abdel Raouf
@@ -85,8 +85,7 @@ export default function Portfolio() {
                 <div
                   key={index}
                   className="bg-white text-gray-800 rounded-lg shadow-lg overflow-hidden"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
+                  data-aos={index%2 == 0 ? "fade-up" : "fade-down"}
                 >
                   {item.type === "video" ? (
                     <iframe

@@ -48,28 +48,24 @@ With sincere appreciation and gratitude.`,
       name: "Mr. Omar Abdel Raouf",
       title: "General Manager",
       image: generalManager,
-      message: `To all the employees of Great Shield Construction,
+      message: `It is my pleasure, as General Manager of Great Shield Construction, to welcome you to our esteemed company—an active and reliable partner in shaping Egypt’s future.
 
-I am pleased to share with you my thoughts and vision for the future of our company. We have achieved a lot over the past years, and we now stand at the threshold of a new phase filled with opportunities and challenges.
+Founded on our firm belief in contributing to the nation’s progress, our company provides integrated engineering and construction services that meet the growing demands of the Egyptian market. We take pride in our vital role in executing major national projects that have helped strengthen the country’s infrastructure and regional position.
 
-Our vision is to become a leading construction company in Egypt and the Arab region—driving prosperity through innovative and sustainable projects.
+At Great Shield Construction, we believe that construction is not merely about erecting buildings, but about building a better future. That’s why we commit to the highest standards of quality and sustainability by utilizing eco-friendly materials and innovative technologies that help preserve natural resources.
 
-To achieve this, we must work together to fulfill our key goals:
-• Lead the construction industry in Egypt and the region
-• Deliver high-quality building services that exceed client expectations
-• Commit to the highest standards of quality and safety
-• Build sustainable and innovative projects that benefit society
-• Develop our employees and create an exceptional work environment
-• Strengthen relationships with clients and partners
-• Uphold our social and environmental responsibility
+As part of our strong sense of social responsibility, we continuously support initiatives that promote education, vocational training, job creation for youth, and charitable contributions in the communities we serve.
 
-I believe that through teamwork, dedication, and creativity, we can accomplish these goals.
+Our strategy aligns fully with Egypt’s Vision 2030, and we actively contribute to its goals by:
+• Supporting urban development through large-scale infrastructure and housing projects
+• Creating job opportunities and training Egyptian youth on modern technologies
+• Strengthening the national economy through economic participation
+• Enhancing quality of life by building new cities and integrated communities
+• Protecting the environment through green building practices
 
-I want to thank each one of you for your efforts and commitment. I look forward to working with you to build a brighter future for Great Shield Construction and our community.
+We look to the future with great optimism and are committed to maintaining our leadership in the construction sector in Egypt and the region. We will continue to invest in human capital, adopt cutting-edge construction technologies, and uphold international standards of excellence.
 
-Together, we will achieve great things!
-
-With sincere appreciation,`,
+With sincere appreciation and gratitude.`,
       signature: generalManagerSignature,
     },
   ];

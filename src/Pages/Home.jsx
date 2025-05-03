@@ -39,12 +39,12 @@ const Home = () => {
       ) : (
         <main className="overflow-hidden">
           <Hero />
-          <LandscapeContextProvider>
-            <Landscape />
-          </LandscapeContextProvider>
           <Services />
           <About />
           <Projects />
+          <LandscapeContextProvider>
+            <Landscape />
+          </LandscapeContextProvider>
           <CustomersContextProvider>
             <Customers />
           </CustomersContextProvider>

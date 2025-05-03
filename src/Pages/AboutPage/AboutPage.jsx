@@ -13,20 +13,20 @@ import Aos from "aos";
 export default function AboutPage() {
   const [isLoading, setIsLodaing] = useState(false);
 
-  // useEffect(() => {
-  //   let x = 1;
-  //   const interval = setInterval(() => {
-  //     if (x < 2) {
-  //       setIsLodaing(true);
-  //       x = x + 1;
-  //     } else {
-  //       setIsLodaing(false);
-  //     }
-  //   }, 100);
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, []);
+  useEffect(() => {
+    let x = 1;
+    const interval = setInterval(() => {
+      if (x < 2) {
+        setIsLodaing(true);
+        x = x + 1;
+      } else {
+        setIsLodaing(false);
+      }
+    }, 100);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   useEffect(() => {
     Aos.init({ duration: 800 });

@@ -7,7 +7,6 @@ import Navbar from "./Components/Navbar/Navbar.jsx";
 
 import { lazy, Suspense } from "react";
 
-const Home = lazy(() => import("./Pages/Home.jsx"));
 const ContactPage = lazy(() => import("./Pages/ContactPage.jsx"));
 const AboutPage = lazy(() => import("./Pages/AboutPage/AboutPage.jsx"));
 const ServicesPage = lazy(() => import("./Pages/ServicesPage.jsx"));
@@ -15,6 +14,7 @@ const NotFound = lazy(() => import("./Pages/NotFound.jsx"));
 
 import Footer from "./Components/Footer/Footer.jsx";
 import Loading from "./Components/Loading/Loading.jsx";
+import Home from "./Pages/Home.jsx";
 import ProjectsPage from "./Pages/ProjectsPage.jsx";
 import ProjectDetails from "./Pages/ProjectDetails.jsx";
 import ProjectsContextProvider from "./Context/ProjectsContext.jsx";
@@ -35,10 +35,7 @@ function App() {
           <Route
             path="/"
             element={
-              <Suspense fallback={<Loading />}>
-                {" "}
-                <Home />{" "}
-              </Suspense>
+                <Home />
             }
           />
           <Route

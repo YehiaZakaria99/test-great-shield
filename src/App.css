@@ -68,10 +68,13 @@ button {
   }
 }
 
+
+/* hero */
 .hero-sec {
   @media (width <= 576px) {
     background-image: url(/hero/bgHeroMobile.webp);
     background-position: right;
+    
   }
   @media (width > 576px) {
     background-image: url("/hero/bgHero.webp");

@@ -23,6 +23,7 @@ export default function Customers() {
           {logos.slice(0, 8).map((logo, index) => (
             <div key={index} data-aos="zoom-in">
               <img
+                loading="lazy"
                 src={logo}
                 alt={`Client ${index + 1}`}
                 className="h-32 mx-auto  transition-all duration-300"
@@ -33,7 +34,7 @@ export default function Customers() {
 
         <div className="py-10" data-aos="fade-up">
           <Link
-            to={'/customers'}
+            to={"/customers"}
             className="inline-flex items-center group px-5 py-3 border-2 border-mainColor text-mainColor hover:bg-mainColor hover:text-navBg transition duration-300 rounded-lg"
           >
             All Clients

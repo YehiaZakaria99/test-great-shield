@@ -2,6 +2,7 @@ import { createContext } from "react";
 
 // imgs
 import img1 from "/CustomersSec/01.webp";
+import img23 from "/CustomersSec/23.webp";
 import img2 from "/CustomersSec/02.webp";
 import img3 from "/CustomersSec/03.webp";
 import img4 from "/CustomersSec/04.webp";
@@ -22,7 +23,6 @@ import img18 from "/CustomersSec/18.webp";
 import img19 from "/CustomersSec/19.webp";
 import img21 from "/CustomersSec/21.webp";
 import img22 from "/CustomersSec/22.webp";
-import img23 from "/CustomersSec/23.webp";
 import img24 from "/CustomersSec/24.webp";
 import img25 from "/CustomersSec/25.webp";
 
@@ -31,6 +31,7 @@ export let CustomersContext = createContext();
 export default function CustomersContextProvider({ children }) {
   const logos = [
     img1,
+    img23,
     img2,
     img3,
     img4,
@@ -51,7 +52,6 @@ export default function CustomersContextProvider({ children }) {
     img19,
     img21,
     img22,
-    img23,
     img24,
     img25,
   ];

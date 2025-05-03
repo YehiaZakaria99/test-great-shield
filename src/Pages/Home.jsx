@@ -15,6 +15,9 @@ const Home = () => {
     <>
       <main className="overflow-hidden">
         <Hero />
+        <LandscapeContextProvider>
+          <Landscape />
+        </LandscapeContextProvider>
         <Services />
         <About />
         <Projects />
@@ -22,9 +25,6 @@ const Home = () => {
           <Customers />
         </CustomersContextProvider>
         <Contact />
-        <LandscapeContextProvider>
-          <Landscape />
-        </LandscapeContextProvider>
       </main>
     </>
   );

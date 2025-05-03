@@ -9,10 +9,10 @@ import img5 from "/landscape/05.webp";
 export let LandscapeContext = createContext();
 export default function LandscapeContextProvider({ children }) {
   const landscapes = [
-    {
-      id: 0,
-      image: img1,
-    },
+    // {
+    //   id: 0,
+    //   image: img1,
+    // },
     {
       id: 1,
       image: img2,

@@ -56,7 +56,7 @@ export default function Landscape() {
           data-aos-easing="ease-in-out"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-bg">
-            Our Featured Projects
+            Our Landscapes
           </h2>
         </div>
         <Slider ref={sliderRef} {...settings}>

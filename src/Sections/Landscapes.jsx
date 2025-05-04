@@ -60,7 +60,7 @@ export default function Landscapes() {
           </h2>
         </div>
         <div className="my-8">
-          <Slider ref={sliderRef} {...settings}>
+          <Slider {...settings}>
             {landscapes.map((landscape, index) => (
               <div
                 key={index}
@@ -70,7 +70,7 @@ export default function Landscapes() {
               >
                 <div className="bg-[#111] rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row items-center gap-6 p-6">
                   <img
-                    src={landscape.image}
+                    src={landscape.mainImage}
                     alt="landscape.title"
                     className="w-full md:w-1/2 h-64 object-cover rounded-xl"
                     loading="lazy"

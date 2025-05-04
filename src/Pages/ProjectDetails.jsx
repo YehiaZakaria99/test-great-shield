@@ -58,7 +58,7 @@ export default function ProjectDetails() {
                   {currentProject.images.map((img, idx) => (
                     <div
                       key={idx}
-                      className="w-full h-80 cursor-pointer"
+                      className="w-full h-72 cursor-pointer "
                       onClick={() => openModal(img)}
                     >
                       <img
@@ -72,7 +72,7 @@ export default function ProjectDetails() {
                 </Slider>
               ) : (
                 <div
-                  className="w-full h-80 cursor-pointer"
+                  className="w-full h-72 cursor-pointer"
                   onClick={() => openModal(currentProject.images[0])}
                 >
                   <img

@@ -1,76 +1,136 @@
-import { FaArrowRight, FaTimes } from "react-icons/fa";
+import { useRef, useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import {
+  FaAngleLeft,
+  FaAngleRight,
+  FaArrowRight,
+  FaTimes,
+} from "react-icons/fa";
+import Slider from "react-slick";
 
-export default function LandscapesPageCard({landscape:{id, image, title, city, description }, index}) {
-    
+export default function LandscapesPageCard({
+  landscape: { id, mainImage, title, city, description, allImages },
+  index,
+}) {
+  const sliderRef = useRef(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState("");
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+    pauseOnHover: true,
+  };
+
+  const openModal = (img) => {
+    setCurrentImage(img);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setCurrentImage("");
+  };
+
   return (
-    <div
+    <>
+      <div
         id={id}
-      //   data-aos={dataAos}
-      className={`w-full flex flex-col ${index%2 !== 0 ? "md:flex-row-reverse" : "md:flex-row" } items-center justify-center gap-10 px-4 max-w-7xl mx-auto`}
-    >
-      {/* Image */}
-      <div className="w-full md:w-1/2">
-        <img
-          data-aos={index%2 !==0 ? "flip-right" : "flip-left"}
-            src={image}
-            alt={title}
-          className="rounded-3xl shadow-2xl w-full h-[200px] sm:h-[300px] md:h-[400px] object-cover transition-transform duration-500 hover:scale-105"
-        />
-      </div>
+        className={`w-full flex flex-col ${
+          index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
+        } items-center justify-center gap-10 px-4 max-w-7xl mx-auto`}
+      >
+        {/* Image */}
+        <div className="w-full md:w-1/2">
+          <div className="my-8">
+            <Slider {...settings}>
+              {allImages.map((img, index) => (
+                <div
+                  className="cursor-pointer"
+                  onClick={(e) => openModal(allImages[0])}
+                >
+                  <img
+                    data-aos={index % 2 !== 0 ? "flip-right" : "flip-left"}
+                    src={img}
+                    alt={title}
+                    className="py-3 rounded-3xl shadow-2xl w-full h-[200px] sm:h-[300px] md:h-[350px] object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
 
-      {/* Content */}
-      <div 
-      data-aos= {index%2 !==0 ? "fade-right" : "fade-left"}
-      className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left space-y-4">
-        <h3 className="text-3xl md:text-3xl font-bold text-mainColor">{title}</h3>
-        <h4 className="text-xl md:text-xl font-bold text-sky-400">{city}</h4>
-        <p className="text-gray-300 text-lg leading-relaxed">{description}</p>
-
-        {/* <button
-          //   onClick={openModal}
-          className="mt-4 inline-flex items-center gap-2 self-center md:self-start px-5 py-2 rounded-xl border-2 border-mainColor text-mainColor hover:bg-mainColor hover:text-navBg transition-all duration-300 group"
+        {/* Content */}
+        <div
+          data-aos={index % 2 !== 0 ? "fade-right" : "fade-left"}
+          className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left space-y-4"
         >
-          Details
-          <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-        </button> */}
+          <h3 className="text-3xl md:text-3xl font-bold text-mainColor">
+            {title}
+          </h3>
+          <h4 className="text-xl md:text-xl font-bold text-sky-400">{city}</h4>
+          {/* <p className="text-gray-300 text-lg leading-relaxed">{description}</p> */}
+        </div>
       </div>
 
       {/* Modal */}
-      {/*
-      {isModalOpen && (
+      {modalOpen && (
         <div
-          className={`fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 transition-all duration-500 ${
-            showModalClass ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
+          onClick={closeModal}
+          className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center px-4"
         >
           <div
-            ref={modalRef}
-            className={`relative bg-[#1f1f1f] w-full max-w-5xl rounded-3xl p-6 md:p-10 shadow-2xl transition-all duration-500 transform ${
-              showModalClass
-                ? "scale-100 opacity-100 translate-y-0"
-                : "scale-95 opacity-0 translate-y-8"
-            } max-h-[95vh] overflow-y-auto custom-scrollbar flex flex-col`}
+            onClick={(e) => e.stopPropagation()}
+            className="relative max-w-3xl w-full"
           >
-            // Close Button
+            {/* Close Btn */}
             <button
-              className="absolute top-0 right-0 md:top-4 md:right-4 text-gray-400 hover:text-red-500 transition z-10"
               onClick={closeModal}
+              className="absolute top-2 right-2 flex justify-center items-center text-white text-xl font-bold bg-red-600 w-8 h-8 rounded-full hover:bg-red-700 transition z-50"
             >
-              <FaTimes size={28} />
+              <AiOutlineClose />
             </button>
 
-            // Title
-            <h4 className="text-3xl font-bold text-orange-400 mb-8 text-center">
-              {title}
-            </h4>
+            {/* Slider Controls */}
+            <button
+              onClick={() => sliderRef.current?.slickPrev()}
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-mainColor text-white p-2 rounded-full z-50 hover:bg-white hover:text-mainColor transition"
+            >
+              <FaAngleLeft />
+            </button>
+            <button
+              onClick={() => sliderRef.current?.slickNext()}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-mainColor text-white p-2 rounded-full z-50 hover:bg-white hover:text-mainColor transition"
+            >
+              <FaAngleRight />
+            </button>
 
-            // Modal Content
-            <div className="text-gray-200 text-lg leading-relaxed">
-              {moreContent}
-            </div>
+            {/* Slider */}
+            <Slider
+              ref={sliderRef}
+              {...settings}
+              initialSlide={allImages.findIndex((img) => img === currentImage)}
+              className="rounded-lg overflow-hidden"
+            >
+              {allImages.map((img, index) => (
+                <div key={index} className="w-full h-96">
+                  <img
+                    src={img}
+                    alt={`Modal Slide ${index}`}
+                    className="rounded-lg w-full h-full max-h-[80vh] object-cover object-center border border-white"
+                  />
+                </div>
+              ))}
+            </Slider>
           </div>
         </div>
-      )} */}
-    </div>
+      )}
+    </>
   );
 }

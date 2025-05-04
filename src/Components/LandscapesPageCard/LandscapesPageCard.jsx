@@ -58,7 +58,7 @@ export default function LandscapesPageCard({
             >
               {allImages.map((img, index) => (
                 <div
-                  className="cursor-pointer"
+                  className="cursor-pointer flex"
                   onClick={(e) => openModal(allImages[0])}
                 >
                   <img

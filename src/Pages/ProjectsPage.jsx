@@ -57,16 +57,16 @@ export default function ProjectsPage() {
                   data-aos="fade-left"
                   data-aos-easing="ease-in-out"
                 >
-                  Featured Construction Projects
+                  At Great Shield, we deliver exceptional projects across
+                  residential, commercial, and public sectors. With a commitment
+                  to quality, innovation, and on-time completion, we bring
+                  visionary concepts to life through expert execution.
                 </p>
               </section>
 
               <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {projects.map((project, index) => (
-                  <div
-                    key={index}
-                    data-aos="zoom-out"
-                  >
+                  <div key={index} data-aos="zoom-out">
                     <ProjectsPageCard index={index} project={project} />
                   </div>
                 ))}

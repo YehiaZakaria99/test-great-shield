@@ -44,10 +44,10 @@ export default function LandscapesPage() {
                 className="text-gray-400 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed"
                 data-aos="fade-left"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus tempora quod ad harum omnis odio nulla quasi eum
-                laborum optio error, temporibus, voluptatibus distinctio sint
-                natus assumenda labore possimus quo?
+                At Great Shield, we design and build stunning landscapes that
+                elevate residential, commercial, and public spaces. With a focus
+                on creativity, durability, and timely delivery, we transform
+                outdoor areas into inspiring environments of lasting beauty.
               </p>
             </section>
             <section className="space-y-28 overflow-hidden">

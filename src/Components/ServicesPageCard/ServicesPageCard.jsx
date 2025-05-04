@@ -25,7 +25,14 @@ export default function ServicesPageCard({ service }) {
       </h3>
 
       <div className="max-w-6xl mx-auto">
-        <Slider {...settings}>
+        <Slider
+          beforeChange={() => {
+            if (document.activeElement instanceof HTMLElement) {
+              document.activeElement.blur();
+            }
+          }}
+          {...settings}
+        >
           {service.subSections.map((section, i) => (
             <div
               key={i}

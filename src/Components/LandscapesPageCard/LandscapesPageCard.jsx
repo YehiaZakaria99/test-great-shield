@@ -41,14 +41,21 @@ export default function LandscapesPageCard({
     <>
       <div
         id={id}
-        className={`w-full flex flex-col ${
+        className={`w-full flex flex-col-reverse ${
           index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
-        } items-center justify-center gap-10 px-4 max-w-7xl mx-auto`}
+        } items-center justify-center gap-0 md:gap-10 px-4 max-w-7xl mx-auto`}
       >
         {/* Image */}
         <div className="w-full md:w-1/2">
           <div className="my-8">
-            <Slider {...settings}>
+            <Slider
+              beforeChange={() => {
+                if (document.activeElement instanceof HTMLElement) {
+                  document.activeElement.blur();
+                }
+              }}
+              {...settings}
+            >
               {allImages.map((img, index) => (
                 <div
                   className="cursor-pointer"
@@ -113,6 +120,11 @@ export default function LandscapesPageCard({
 
             {/* Slider */}
             <Slider
+              beforeChange={() => {
+                if (document.activeElement instanceof HTMLElement) {
+                  document.activeElement.blur();
+                }
+              }}
               ref={sliderRef}
               {...settings}
               initialSlide={allImages.findIndex((img) => img === currentImage)}

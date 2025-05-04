@@ -60,7 +60,14 @@ export default function Landscapes() {
           </h2>
         </div>
         <div className="my-8">
-          <Slider {...settings}>
+          <Slider
+            beforeChange={() => {
+              if (document.activeElement instanceof HTMLElement) {
+                document.activeElement.blur();
+              }
+            }}
+            {...settings}
+          >
             {landscapes.map((landscape, index) => (
               <div
                 key={index}

@@ -54,7 +54,15 @@ export default function ProjectDetails() {
             {/* Images */}
             <div className="w-full md:w-1/3 lg:w-1/4">
               {currentProject.images.length > 1 ? (
-                <Slider {...settings} className="w-full h-80">
+                <Slider
+                  beforeChange={() => {
+                    if (document.activeElement instanceof HTMLElement) {
+                      document.activeElement.blur();
+                    }
+                  }}
+                  {...settings}
+                  className="w-full h-80"
+                >
                   {currentProject.images.map((img, idx) => (
                     <div
                       key={idx}

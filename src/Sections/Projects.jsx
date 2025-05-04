@@ -14,24 +14,6 @@ export default function Projects() {
     };
   }, []);
 
-  const sliderRef = useRef(null);
-  useEffect(() => {
-    const lastViewed = sessionStorage.getItem("lastViewedProject");
-
-    if (lastViewed && sliderRef.current) {
-      setTimeout(() => {
-        const index = parseInt(lastViewed);
-        sliderRef?.current?.slickGoTo(index);
-        sliderRef?.current?.slickPause();
-
-        setTimeout(() => {
-          sliderRef?.current?.slickPlay();
-        }, 3000);
-
-        sessionStorage.removeItem("lastViewedProject");
-      }, 300);
-    }
-  }, []);
 
   const settings = {
     dots: true,
@@ -60,7 +42,7 @@ export default function Projects() {
           </h2>
         </div>
         <div className="my-8">
-          <Slider ref={sliderRef} {...settings}>
+          <Slider {...settings}>
             {projects.slice(0, 10).map((project, index) => (
               <div
                 key={index}
@@ -83,7 +65,6 @@ export default function Projects() {
 
                     <button
                       onClick={() => {
-                        sessionStorage.setItem("lastViewedProject", index);
                         navigate(`/projectDetails/${index}`);
                       }}
                       className="mt-4 inline-block px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-md"

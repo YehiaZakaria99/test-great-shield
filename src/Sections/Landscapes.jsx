@@ -59,28 +59,29 @@ export default function Landscapes() {
             Our Landscapes
           </h2>
         </div>
-        <Slider ref={sliderRef} {...settings}>
-          {landscapes.map((landscape, index) => (
-            <div
-              key={index}
-              className=" px-6 py-3"
-              data-aos="fade-up"
-              data-aos-easing="ease-in-out"
-            >
-              <div className="bg-[#111] rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row items-center gap-6 p-6">
-                <img
-                  src={landscape.image}
-                  alt="landscape.title"
-                  className="w-full md:w-1/2 h-64 object-cover rounded-xl"
-                  loading="lazy"
-                />
-                <div className="text-center md:text-left md:w-1/2">
-                  <h3 className="text-2xl font-semibold text-mainColor mb-2">
-                    {landscape.title}
-                  </h3>
-                  <p className="mb-4 text-gray-100">{landscape.city}</p>
+        <div className="my-8">
+          <Slider ref={sliderRef} {...settings}>
+            {landscapes.map((landscape, index) => (
+              <div
+                key={index}
+                className=" px-6 py-3"
+                data-aos="fade-up"
+                data-aos-easing="ease-in-out"
+              >
+                <div className="bg-[#111] rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row items-center gap-6 p-6">
+                  <img
+                    src={landscape.image}
+                    alt="landscape.title"
+                    className="w-full md:w-1/2 h-64 object-cover rounded-xl"
+                    loading="lazy"
+                  />
+                  <div className="text-center md:text-left md:w-1/2">
+                    <h3 className="text-2xl font-semibold text-mainColor mb-2">
+                      {landscape.title}
+                    </h3>
+                    <p className="mb-4 text-gray-100">{landscape.city}</p>
 
-                  <button
+                    {/* <button
                     onClick={() => {
                       sessionStorage.setItem("lastViewedLandscape", index);
                       navigate(`/landscapeDetails/${landscape.id}`);
@@ -88,14 +89,15 @@ export default function Landscapes() {
                     className="mt-4 inline-block px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-md"
                   >
                     View Details
-                  </button>
+                  </button> */}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
       </div>
-      <div className="py-10 text-center" data-aos="fade-up">
+      <div className="text-center py-10" data-aos="fade-up">
         <Link
           to={"/landscapes"}
           className="inline-flex items-center group px-5 py-3 border-2 border-mainColor text-mainColor hover:bg-mainColor hover:text-navBg transition duration-300 rounded-lg"

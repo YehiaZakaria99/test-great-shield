@@ -66,8 +66,6 @@ export default function ProjectsPage() {
                   <div
                     key={index}
                     data-aos="zoom-out"
-                    // data-aos-delay={index * 100}
-                    // data-aos-easing="linear"
                   >
                     <ProjectsPageCard index={index} project={project} />
                   </div>

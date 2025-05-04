@@ -90,7 +90,7 @@ export default function ProjectDetails() {
               className="w-full md:w-2/3 lg:w-3/4 space-y-4"
               data-aos="fade-left"
             >
-              <div className="my-4">
+              <div className="my-2">
                 {currentProject.title && (
                   <h3 className="text-3xl font-bold text-mainColor mb-4">
                     {currentProject.title}
@@ -111,6 +111,14 @@ export default function ProjectDetails() {
                         consultant :
                       </span>{" "}
                       {currentProject.consultant}
+                    </p>
+                  )}
+                  {currentProject.location && (
+                    <p className="mb-2">
+                      <span className="font-bold text-sky-400 capitalize">
+                        location :
+                      </span>{" "}
+                      {currentProject.location}
                     </p>
                   )}
                   {currentProject.fullDescription && (

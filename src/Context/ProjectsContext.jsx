@@ -86,7 +86,8 @@ import img1proj30 from "/projectsPage/proj30/01.webp";
 // Saudi Egyptian Developers Project (Jade Project) – Phase 1
 import img1proj32 from "/projectsPage/proj32/01.webp";
 // Swan Lake North Coast by Hassan Allam
-// import img1proj33 from "/projectsPage/proj33/01.webp";
+import img1proj33 from "/projectsPage/proj33/01.webp";
+import img2proj33 from "/projectsPage/proj33/02.webp";
 
 export let ProjectsContext = createContext();
 
@@ -98,9 +99,9 @@ export default function ProjectsContextProvider({ children }) {
       title:
         "Faculty of Computers and Artificial Intelligence – Benha University. ",
       images: [img1proj21, img2proj21],
-      owner: " Benha University ",
+      owner: "Benha University ",
       consultant: "Engineering Department of Benha University",
-      startDate: " ",
+      startDate: "",
       endDate: "",
       location: "Benha, Qalyubia Governorate",
       // contractValue: "",
@@ -120,9 +121,9 @@ export default function ProjectsContextProvider({ children }) {
       title:
         "Faculty of Agricultural and Biosystems Engineering – Benha University. ",
       images: [img1proj22],
-      owner: " Benha University ",
+      owner: "Benha University ",
       consultant: "Engineering Department of Benha University",
-      startDate: " ",
+      startDate: "",
       endDate: "",
       location: "Moshtohor – Toukh, Egypt",
       // contractValue: "",
@@ -143,7 +144,7 @@ export default function ProjectsContextProvider({ children }) {
       images: [img1proj3, img2proj3],
       owner: "Al-Azhar Authority",
       consultant: "Eng. Tarek Abdel-Ghaffar Office",
-      startDate: " May 2023",
+      startDate: "May 2023",
       endDate: "March 2024",
       location: "Shebin El-Kom Street – Ismailia Governorate",
       // contractValue: "",
@@ -228,9 +229,9 @@ export default function ProjectsContextProvider({ children }) {
       images: [img1proj4, img2proj4],
       owner: "The Engineering Authority of the Armed Forces",
       consultant: "RBC Office",
-      startDate: " August 2022",
+      startDate: "August 2022",
       endDate: "July 2024",
-      location: " Al-Zohour District – Military Entity – Ain Sokhna Road",
+      location: "Al-Zohour District – Military Entity – Ain Sokhna Road",
       // contractValue: "",
       // projectDescription: "",
       fullDescription:
@@ -242,143 +243,16 @@ export default function ProjectsContextProvider({ children }) {
         "General site works (including curbstones, interlock tiling, and infrastructure works)",
       ],
     },
-    // ################## proj 5
-    {
-      id: 4,
-      title: "Health center in Haggar El-Dahsa, Qena",
-      images: [img1proj5],
-      owner: " Ministry of Health",
-      consultant: "Perfect Engineering Consultancy",
-      startDate: "May 2023",
-      endDate: "August 2024",
-      location: " Haggar El-Dahsa Center, Qena Governorate",
-      // contractValue: "",
-      // projectDescription: "",
-      fullDescription:
-        "Construction of a healthcare unit with a ground floor area of 450 square meters and two repeated upper floors",
-      scopeOfWork: [
-        "Structural works",
-        "Interior and exterior finishing works",
-        "Electromechanical works",
-        "General site works (including curbstones, interlock tiling, and infrastructure works)",
-      ],
-    },
-    // ################## proj 6
-    {
-      id: 5,
-      title: "Mercedes Benz Service Center in Ain Sokhna",
-      images: [img1proj6],
-      owner: "Mercedes Benz Company",
-      consultant: "Cairo Consult",
-      startDate: "May 2022",
-      endDate: "July 2023",
-      location: "  Industrial Area, Ain Sokhna",
-      // contractValue: "",
-      // projectDescription: "",
-      fullDescription:
-        "Construction of an administrative building with a ground floor area of 360 square meters, service and security rooms with an area of 80 square meters, and general site works covering 20,000 square meters",
-      scopeOfWork: [
-        "Structural works",
-        "Interior and exterior finishing works",
-        "Electromechanical works",
-        "General site works (including curbstones, interlock tiling, and infrastructure works)",
-      ],
-    },
-    // ################## proj 7
-    {
-      id: 6,
-      title: "Health center in Nagaa Al-Omda, Qena",
-      images: [img1proj7],
-      owner: "Ministry of Health",
-      consultant: "Perfect Engineering Consultancy",
-      startDate: "July 2023",
-      endDate: " August 2024",
-      location: "Nagaa Al-Omda Center, Qena Governorate",
-      // contractValue: "",
-      // projectDescription: "",
-      fullDescription:
-        "Construction of a healthcare unit with a ground floor area of 650 square meters, two typical floors, and general site works",
-      scopeOfWork: [
-        "Structural works",
-        "Interior and exterior finishing works",
-        "Electromechanical works",
-        "General site works (curbstones, interlock tiles, and infrastructure works)",
-      ],
-    },
-    // ################## proj 8
-    {
-      id: 7,
-      title: "Al-Azhar Hotel in Ismailia",
-      images: [img1proj8],
-      owner: " Al-Azhar Authority",
-      consultant: "ECB Office",
-      startDate: " June 27, 2021",
-      endDate: " January 29, 2025",
-      location: "Shebin El-Kom Street – Ismailia Governorate",
-      // contractValue: "",
-      // projectDescription: "",
-      fullDescription:
-        "Construction of an administrative and residential building with a built-up area of 3,600 square meters, consisting of a basement, ground floor, and four typical floors, along with general site works covering 12,000 square meters",
-      scopeOfWork: [
-        "Structural works",
-        "Interior and exterior finishing works",
-        "Electromechanical works",
-        "General site works (curbstones, interlock tiles, and infrastructure works)",
-      ],
-    },
-    // ################## proj 9
-    {
-      id: 8,
-      title: "12 social housing buildings in the Sixth of October",
-      images: [img1proj9, img2proj9],
-      owner: "Urban Communities Authority",
-      consultant: "Urban Communities Authority",
-      startDate: " June 20, 2020",
-      endDate: " July 20, 2023",
-      location: "Sixth of October City",
-      // contractValue: "",
-      // projectDescription: "",
-      fullDescription:
-        "Construction of 12 residential buildings, each with a built-up area of 360 square meters, consisting of a basement, ground floor, and four typical floors.",
-      scopeOfWork: [
-        "Structural works",
-        "Interior and exterior finishing works",
-        "Electromechanical works",
-        "General site works (curbstones, interlock tiles, and infrastructure works)",
-      ],
-    },
-    // ################## proj 10
-    {
-      id: 9,
-      title: "Damanhour University",
-      images: [img1proj10, img2proj10],
-      owner:
-        " Military Production Company for Projects, Engineering Consultations, and General Supplies",
-      consultant: "Damanhour University",
-      startDate: "  January 19, 2021",
-      endDate: "  July 20, 2024",
-      location: "Damanhour University, Damanhour Governorate",
-      // contractValue: "",
-      // projectDescription: "",
-      fullDescription:
-        "Construction of a hospital annex building with a built-up area of 1,600 square meters, consisting of a basement, ground floor, and three typical floors",
-      scopeOfWork: [
-        "Structural works",
-        "Interior and exterior finishing works",
-        "Electromechanical works",
-        "Specialized hospital systems works",
-      ],
-    },
     // ################## proj 11
     {
       id: 10,
       title: "10 buildings in the Saudi Company",
       images: [img1proj11, img2proj11],
-      owner: " Saudi Egyptian Construction Company",
-      consultant: " EHAF Engineering Consultancy",
+      owner: "Saudi Egyptian Construction Company",
+      consultant: "EHAF Engineering Consultancy",
       startDate: "April 2, 2019",
-      endDate: " June 2, 2020",
-      location: " Riyadh Project, First Phase",
+      endDate: "June 2, 2020",
+      location: "Riyadh Project, First Phase",
       // contractValue: "",
       // projectDescription: "",
       fullDescription:
@@ -406,6 +280,113 @@ export default function ProjectsContextProvider({ children }) {
         "General site works (curbstones, interlock tiles, and infrastructure works",
       ],
     },
+    // ################## proj 6
+    {
+      id: 5,
+      title: "Mercedes Benz Service Center in Ain Sokhna",
+      images: [img1proj6],
+      owner: "Mercedes Benz Company",
+      consultant: "Cairo Consult",
+      startDate: "May 2022",
+      endDate: "July 2023",
+      location: "Industrial Area, Ain Sokhna",
+      // contractValue: "",
+      // projectDescription: "",
+      fullDescription:
+        "Construction of an administrative building with a ground floor area of 360 square meters, service and security rooms with an area of 80 square meters, and general site works covering 20,000 square meters",
+      scopeOfWork: [
+        "Structural works",
+        "Interior and exterior finishing works",
+        "Electromechanical works",
+        "General site works (including curbstones, interlock tiling, and infrastructure works)",
+      ],
+    },
+    // ################## proj 7
+    {
+      id: 6,
+      title: "Health center in Nagaa Al-Omda, Qena",
+      images: [img1proj7],
+      owner: "Ministry of Health",
+      consultant: "Perfect Engineering Consultancy",
+      startDate: "July 2023",
+      endDate: "August 2024",
+      location: "Nagaa Al-Omda Center, Qena Governorate",
+      // contractValue: "",
+      // projectDescription: "",
+      fullDescription:
+        "Construction of a healthcare unit with a ground floor area of 650 square meters, two typical floors, and general site works",
+      scopeOfWork: [
+        "Structural works",
+        "Interior and exterior finishing works",
+        "Electromechanical works",
+        "General site works (curbstones, interlock tiles, and infrastructure works)",
+      ],
+    },
+    // ################## proj 8
+    {
+      id: 7,
+      title: "Al-Azhar Hotel in Ismailia",
+      images: [img1proj8],
+      owner: "Al-Azhar Authority",
+      consultant: "ECB Office",
+      startDate: "June 27, 2021",
+      endDate: "January 29, 2025",
+      location: "Shebin El-Kom Street – Ismailia Governorate",
+      // contractValue: "",
+      // projectDescription: "",
+      fullDescription:
+        "Construction of an administrative and residential building with a built-up area of 3,600 square meters, consisting of a basement, ground floor, and four typical floors, along with general site works covering 12,000 square meters",
+      scopeOfWork: [
+        "Structural works",
+        "Interior and exterior finishing works",
+        "Electromechanical works",
+        "General site works (curbstones, interlock tiles, and infrastructure works)",
+      ],
+    },
+    // ################## proj 9
+    {
+      id: 8,
+      title: "12 social housing buildings in the Sixth of October",
+      images: [img1proj9, img2proj9],
+      owner: "Urban Communities Authority",
+      consultant: "Urban Communities Authority",
+      startDate: "June 20, 2020",
+      endDate: "July 20, 2023",
+      location: "Sixth of October City",
+      // contractValue: "",
+      // projectDescription: "",
+      fullDescription:
+        "Construction of 12 residential buildings, each with a built-up area of 360 square meters, consisting of a basement, ground floor, and four typical floors.",
+      scopeOfWork: [
+        "Structural works",
+        "Interior and exterior finishing works",
+        "Electromechanical works",
+        "General site works (curbstones, interlock tiles, and infrastructure works)",
+      ],
+    },
+    // ################## proj 10
+    {
+      id: 9,
+      title: "Damanhour University",
+      images: [img1proj10, img2proj10],
+      owner:
+        "Military Production Company for Projects, Engineering Consultations, and General Supplies",
+      consultant: "Damanhour University",
+      startDate: " January 19, 2021",
+      endDate: " July 20, 2024",
+      location: "Damanhour University, Damanhour Governorate",
+      // contractValue: "",
+      // projectDescription: "",
+      fullDescription:
+        "Construction of a hospital annex building with a built-up area of 1,600 square meters, consisting of a basement, ground floor, and three typical floors",
+      scopeOfWork: [
+        "Structural works",
+        "Interior and exterior finishing works",
+        "Electromechanical works",
+        "Specialized hospital systems works",
+      ],
+    },
+    
     // ################## proj 13
     {
       id: 12,
@@ -415,7 +396,7 @@ export default function ProjectsContextProvider({ children }) {
       consultant: "Educational Buildings Authority",
       startDate: "October 2019",
       endDate: "November 2020",
-      location: " Badr City",
+      location: "Badr City",
       // contractValue: "",
       // projectDescription: "",
       fullDescription:
@@ -435,7 +416,7 @@ export default function ProjectsContextProvider({ children }) {
       consultant: "ECA Engineering Consultancy",
       startDate: "August 22, 2019",
       endDate: "August 22, 2021",
-      location: " Amwaj Village, Kilometer 145, North Coast",
+      location: "Amwaj Village, Kilometer 145, North Coast",
       // contractValue: "",
       // projectDescription: "",
       fullDescription:
@@ -451,9 +432,9 @@ export default function ProjectsContextProvider({ children }) {
       id: 14,
       title: "The Human Resources Building in Al-Buhouth Al-Azhariyah City",
       images: [img1proj15],
-      owner: "  Al-Azhar Authority",
+      owner: " Al-Azhar Authority",
       consultant: "ECB Office",
-      startDate: " June 22, 2022",
+      startDate: "June 22, 2022",
       endDate: "June 22, 2024",
       location: "Al-Buhouth Al-Azhariyah City",
       // contractValue: "",
@@ -473,8 +454,8 @@ export default function ProjectsContextProvider({ children }) {
       images: [img1proj16],
       owner: "Delta Logistics Company",
       consultant: "Cairo Consult",
-      startDate: " May 30, 2023",
-      endDate: " January 30, 2024",
+      startDate: "May 30, 2023",
+      endDate: "January 30, 2024",
       location: "Sector (5) - Economic Zone - Ain Sokhna - Suez",
       // contractValue: "",
       // projectDescription: "",
@@ -539,7 +520,7 @@ export default function ProjectsContextProvider({ children }) {
       owner: "Cairo Governorate (Sector No. 10)",
       // Contractor: "Egyptian Military Production Company for Projects",
       consultant: "The French Group for Consulting Services (Assaf)",
-      startDate: " July 15, 2024",
+      startDate: "July 15, 2024",
       endDate: "October 15, 2024",
       location: "Ring Road",
       // contractValue: "",
@@ -557,7 +538,7 @@ export default function ProjectsContextProvider({ children }) {
       images: [img1proj20, img2proj20],
       owner: "Hassan Allam Properties ",
       consultant: "Sabtus",
-      startDate: " January 6, 2023",
+      startDate: "January 6, 2023",
       endDate: "December 30, 2024",
       location: "First Settlement, New Cairo",
       // contractValue: "",
@@ -570,13 +551,12 @@ export default function ProjectsContextProvider({ children }) {
         "Network and Infrastructure Works",
       ],
     },
-
     // ################## proj 23
     {
       id: 22,
       title: "Al-Zahraa Towers (Major Projects Administration) ",
       images: [img1proj23],
-      owner: " Armed Forces Housing Fund (Investment Division) ",
+      owner: "Armed Forces Housing Fund (Investment Division) ",
       consultant: "Major Projects Administration",
       startDate: "",
       endDate: "",
@@ -597,7 +577,7 @@ export default function ProjectsContextProvider({ children }) {
       id: 23,
       title: "Bank Misr – Al-Hussein Branch ",
       images: [img1proj24],
-      owner: "  Banque Misr ",
+      owner: " Banque Misr ",
       consultant: "Banque Misr Engineering Department",
       startDate: "",
       endDate: "",
@@ -675,6 +655,27 @@ export default function ProjectsContextProvider({ children }) {
         "Design and execution of water features such as ponds, waterfalls, and fountains.",
       ],
     },
+    // ################## proj 5
+    {
+      id: 4,
+      title: "Health center in Haggar El-Dahsa, Qena",
+      images: [img1proj5],
+      owner: "Ministry of Health",
+      consultant: "Perfect Engineering Consultancy",
+      startDate: "May 2023",
+      endDate: "August 2024",
+      location: "Haggar El-Dahsa Center, Qena Governorate",
+      // contractValue: "",
+      // projectDescription: "",
+      fullDescription:
+        "Construction of a healthcare unit with a ground floor area of 450 square meters and two repeated upper floors",
+      scopeOfWork: [
+        "Structural works",
+        "Interior and exterior finishing works",
+        "Electromechanical works",
+        "General site works (including curbstones, interlock tiling, and infrastructure works)",
+      ],
+    },
     // ################## proj 28
     {
       id: 27,
@@ -704,7 +705,7 @@ export default function ProjectsContextProvider({ children }) {
       images: [img1proj29],
       owner: "",
       consultant: "",
-      startDate: " ",
+      startDate: "",
       endDate: "",
       location: "6th of October",
       // contractValue: "",
@@ -747,7 +748,7 @@ export default function ProjectsContextProvider({ children }) {
       images: [img1proj32],
       owner: "",
       consultant: "",
-      startDate: " ",
+      startDate: "",
       endDate: "",
       location: "New Cairo",
       // contractValue: "",
@@ -761,29 +762,28 @@ export default function ProjectsContextProvider({ children }) {
         "Design and execution of water features such as ponds, waterfalls, and fountains.",
       ],
     },
-
     // ################## proj 33
-    // {
-    //   id: 32,
-    //   title: " Swan Lake North Coast by Hassan Allam",
-    //   images: [img1proj31, img1proj31],
-    //   owner: "",
-    //   consultant: "",
-    //   startDate: "",
-    //   endDate: "",
-    //   location: "New Cairo",
-    //   // contractValue: "",
-    //   // projectDescription: "",
-    //   fullDescription: "",
-    //   scopeOfWork: [
-    //     "Hardscaping: Construction of pathways, retaining walls, ponds, waterfalls, and outdoor furniture.",
-    //     " Land Preparation: Leveling and preparing the land for planting.",
-    //     "Softscape Works: Plant design, selection, and arrangement of trees, shrubs, and flowers.",
-    //     "Irrigation Systems: Design and implementation of effective irrigation systems.",
-    //     "Electrical Work: Design and implementation of lighting systems to enhance the space and provide night-time illumination.",
-    //     "Water Features: Design and installation of water features such as ponds, waterfalls, and fountains.",
-    //   ],
-    // },
+    {
+      id: 32,
+      title: " Swan Lake North Coast by Hassan Allam",
+      images: [img1proj33, img2proj33],
+      owner: "",
+      consultant: "",
+      startDate: "",
+      endDate: "",
+      location: "North Coast",
+      // contractValue: "",
+      // projectDescription: "",
+      fullDescription: "",
+      scopeOfWork: [
+        "Hardscaping: Construction of pathways, retaining walls, ponds, waterfalls, and outdoor furniture.",
+        " Land Preparation: Leveling and preparing the land for planting.",
+        "Softscape Works: Plant design, selection, and arrangement of trees, shrubs, and flowers.",
+        "Irrigation Systems: Design and implementation of effective irrigation systems.",
+        "Electrical Work: Design and implementation of lighting systems to enhance the space and provide night-time illumination.",
+        "Water Features: Design and installation of water features such as ponds, waterfalls, and fountains.",
+      ],
+    },
     // #################
   ];
   return (

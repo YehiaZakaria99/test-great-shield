@@ -32,119 +32,115 @@ function App() {
   return (
     <>
       <Navbar />
-      
-        <Routes>
-          <Route
-            path="/"
-            element={
-                <Home />
-            }
-          />
-          <Route
-            path="/contact"
-            element={
-              <Suspense fallback={<Loading />}>
-                {" "}
-                <ContactPage />{" "}
-              </Suspense>
-            }
-          />
-          {/* About */}
-          <Route
-            path="/about"
-            element={
-              <Suspense fallback={<Loading />}>
-                {" "}
-                <AboutPage />
-              </Suspense>
-            }
-          >
-            <Route path="overview" element={<AboutOverview />} />
-            <Route path="leadership" element={<Leadership />} />
-          </Route>
-          {/* End About */}
-          <Route
-            path="/services"
-            element={
-              <Suspense fallback={<Loading />}>
-                {" "}
-                <ServicesPage />{" "}
-              </Suspense>
-            }
-          />
 
-          <Route
-            path="/projects"
-            element={
-              <Suspense fallback={<Loading />}>
-                {" "}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/contact"
+          element={
+            <Suspense fallback={<Loading />}>
+              {" "}
+              <ContactPage />{" "}
+            </Suspense>
+          }
+        />
+        {/* About */}
+        <Route
+          path="/about"
+          element={
+            <Suspense fallback={<Loading />}>
+              {" "}
+              <AboutPage />
+            </Suspense>
+          }
+        >
+          <Route path="overview" element={<AboutOverview />} />
+          <Route path="leadership" element={<Leadership />} />
+        </Route>
+        {/* End About */}
+        <Route
+          path="/services"
+          element={
+            <Suspense fallback={<Loading />}>
+              {" "}
+              <ServicesPage />{" "}
+            </Suspense>
+          }
+        />
+
+        <Route
+          path="/projects"
+          element={
+            <Suspense fallback={<Loading />}>
+              {" "}
               <ProjectsContextProvider>
                 <ProjectsPage />{" "}
-                </ProjectsContextProvider>
-              </Suspense>
-            }
-          />
-          <Route
-            path="/landscapes"
-            element={
-              <Suspense fallback={<Loading />}>
-                {" "}
-                <LandscapesContextProvider>
+              </ProjectsContextProvider>
+            </Suspense>
+          }
+        />
+        <Route
+          path="/landscapes"
+          element={
+            <Suspense fallback={<Loading />}>
+              {" "}
+              <LandscapesContextProvider>
                 <LandscapesPage />{" "}
-
-                </LandscapesContextProvider>
-              </Suspense>
-            }
-          />
-          <Route
-            path="/projectDetails/:id"
-            element={
-              <Suspense fallback={<Loading />}>
-                {" "}
+              </LandscapesContextProvider>
+            </Suspense>
+          }
+        />
+        <Route
+          path="/projectDetails/:id"
+          element={
+            <Suspense fallback={<Loading />}>
+              {" "}
+              <ProjectsContextProvider>
                 <ProjectDetails />{" "}
-              </Suspense>
-            }
-          />
-          <Route
-            path="/customers"
-            element={
-              <Suspense fallback={<Loading />}>
-                {" "}
-                <CustomersContextProvider>
-                  <CustomersPage />
-                </CustomersContextProvider>{" "}
-              </Suspense>
-            }
-          />
-          <Route
-            path="/portfolio"
-            element={
-              <Suspense fallback={<Loading />}>
-                {" "}
-                <MediaContextProvider>
-                  <Portfolio />
-                </MediaContextProvider>{" "}
-              </Suspense>
-            }
-          />
-          <Route
-            path="/media"
-            element={
-              <Suspense fallback={<Loading />}>
-                {" "}
-                <MediaContextProvider>
-                  <Media />
-                </MediaContextProvider>{" "}
-              </Suspense>
-            }
-          />
-          <Route
-            path="*"
-            element={
-              <div className="text-center mt-20 text-xl"> {<NotFound />} </div>
-            }
-          />
-        </Routes>
+              </ProjectsContextProvider>
+            </Suspense>
+          }
+        />
+        <Route
+          path="/customers"
+          element={
+            <Suspense fallback={<Loading />}>
+              {" "}
+              <CustomersContextProvider>
+                <CustomersPage />
+              </CustomersContextProvider>{" "}
+            </Suspense>
+          }
+        />
+        <Route
+          path="/portfolio"
+          element={
+            <Suspense fallback={<Loading />}>
+              {" "}
+              <MediaContextProvider>
+                <Portfolio />
+              </MediaContextProvider>{" "}
+            </Suspense>
+          }
+        />
+        <Route
+          path="/media"
+          element={
+            <Suspense fallback={<Loading />}>
+              {" "}
+              <MediaContextProvider>
+                <Media />
+              </MediaContextProvider>{" "}
+            </Suspense>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <div className="text-center mt-20 text-xl"> {<NotFound />} </div>
+          }
+        />
+      </Routes>
       {/* <Footer /> */}
     </>
   );

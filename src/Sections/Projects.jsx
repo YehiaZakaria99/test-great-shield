@@ -13,19 +13,19 @@ export default function Projects() {
       Aos.refreshHard();
     };
   }, []);
-  const sliderRef = useRef(null);
 
+  const sliderRef = useRef(null);
   useEffect(() => {
     const lastViewed = sessionStorage.getItem("lastViewedProject");
 
     if (lastViewed && sliderRef.current) {
       setTimeout(() => {
         const index = parseInt(lastViewed);
-        sliderRef.current.slickGoTo(index);
-        sliderRef.current.slickPause();
+        sliderRef?.current?.slickGoTo(index);
+        sliderRef?.current?.slickPause();
 
         setTimeout(() => {
-          sliderRef.current?.slickPlay();
+          sliderRef?.current?.slickPlay();
         }, 3000);
 
         sessionStorage.removeItem("lastViewedProject");
@@ -61,7 +61,7 @@ export default function Projects() {
         </div>
         <div className="my-8">
           <Slider ref={sliderRef} {...settings}>
-            {projects.slice(0,10).map((project, index) => (
+            {projects.slice(0, 10).map((project, index) => (
               <div
                 key={index}
                 className=" px-6 py-3"

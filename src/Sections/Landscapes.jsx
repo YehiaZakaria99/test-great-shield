@@ -48,7 +48,7 @@ export default function Landscapes() {
 
   const navigate = useNavigate();
   return (
-    <section className="py-20 bg-navBg overflow-hidden" id="projects">
+    <section className="py-20 bg-navBg overflow-hidden" id="landscapes">
       <div className="max-w-6xl mx-auto px-4">
         <div
           className="text-center mb-12"

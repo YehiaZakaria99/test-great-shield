@@ -27,6 +27,7 @@ import Leadership from "./Pages/AboutPage/Leadership.jsx";
 import MediaContextProvider from "./Context/MediaContext.jsx";
 import LandscapesPage from "./Pages/LandscapesPage.jsx";
 import LandscapesContextProvider from "./Context/LandscapesContext.jsx";
+// import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Navbar />
 
       <Routes>
+        {/* <ScrollToTop /> */}
         <Route path="/" element={<Home />} />
         <Route
           path="/contact"
@@ -141,7 +143,7 @@ function App() {
           }
         />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

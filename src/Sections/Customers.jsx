@@ -10,7 +10,7 @@ export default function Customers() {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <section className="py-20 bg-navBg overflow-hidden">
+    <section className="py-20 bg-navBg overflow-hidden" id="customers">
       <div className="container mx-auto text-center">
         <h2
           className="text-3xl md:text-4xl font-bold my-8 mb-12 text-bg"

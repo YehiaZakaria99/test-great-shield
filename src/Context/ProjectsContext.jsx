@@ -137,6 +137,49 @@ export default function ProjectsContextProvider({ children }) {
         " Site development works",
       ],
     },
+    // ################## proj 6
+    {
+      id: 5,
+      title: "Mercedes Benz Service Center in Ain Sokhna",
+      images: [img1proj6],
+      owner: "Mercedes Benz Company",
+      consultant: "Cairo Consult",
+      startDate: "May 2022",
+      endDate: "July 2023",
+      location: "Industrial Area, Ain Sokhna",
+      // contractValue: "",
+      // projectDescription: "",
+      fullDescription:
+        "Construction of an administrative building with a ground floor area of 360 square meters, service and security rooms with an area of 80 square meters, and general site works covering 20,000 square meters",
+      scopeOfWork: [
+        "Structural works",
+        "Interior and exterior finishing works",
+        "Electromechanical works",
+        "General site works (including curbstones, interlock tiling, and infrastructure works)",
+      ],
+    },
+    // ################## proj 33
+    {
+      id: 32,
+      title: " Swan Lake North Coast by Hassan Allam",
+      images: [img1proj33, img2proj33],
+      owner: "",
+      consultant: "",
+      startDate: "",
+      endDate: "",
+      location: "North Coast",
+      // contractValue: "",
+      // projectDescription: "",
+      fullDescription: "",
+      scopeOfWork: [
+        "Hardscaping: Construction of pathways, retaining walls, ponds, waterfalls, and outdoor furniture.",
+        " Land Preparation: Leveling and preparing the land for planting.",
+        "Softscape Works: Plant design, selection, and arrangement of trees, shrubs, and flowers.",
+        "Irrigation Systems: Design and implementation of effective irrigation systems.",
+        "Electrical Work: Design and implementation of lighting systems to enhance the space and provide night-time illumination.",
+        "Water Features: Design and installation of water features such as ponds, waterfalls, and fountains.",
+      ],
+    },
     // ################## proj 3
     {
       id: 2,
@@ -158,6 +201,7 @@ export default function ProjectsContextProvider({ children }) {
         "General site works (including curbstones, interlock tiling, and infrastructure works)",
       ],
     },
+
     // ################## proj 1
     {
       id: 0,
@@ -280,27 +324,7 @@ export default function ProjectsContextProvider({ children }) {
         "General site works (curbstones, interlock tiles, and infrastructure works",
       ],
     },
-    // ################## proj 6
-    {
-      id: 5,
-      title: "Mercedes Benz Service Center in Ain Sokhna",
-      images: [img1proj6],
-      owner: "Mercedes Benz Company",
-      consultant: "Cairo Consult",
-      startDate: "May 2022",
-      endDate: "July 2023",
-      location: "Industrial Area, Ain Sokhna",
-      // contractValue: "",
-      // projectDescription: "",
-      fullDescription:
-        "Construction of an administrative building with a ground floor area of 360 square meters, service and security rooms with an area of 80 square meters, and general site works covering 20,000 square meters",
-      scopeOfWork: [
-        "Structural works",
-        "Interior and exterior finishing works",
-        "Electromechanical works",
-        "General site works (including curbstones, interlock tiling, and infrastructure works)",
-      ],
-    },
+
     // ################## proj 7
     {
       id: 6,
@@ -386,7 +410,7 @@ export default function ProjectsContextProvider({ children }) {
         "Specialized hospital systems works",
       ],
     },
-    
+
     // ################## proj 13
     {
       id: 12,
@@ -760,28 +784,6 @@ export default function ProjectsContextProvider({ children }) {
         "Softscape works involving landscape design, plant selection, and arrangement of trees, shrubs, and flowers.",
         "Design and implementation of efficient irrigation systems and electrical works, including lighting systems to beautify the area and provide nighttime illumination.",
         "Design and execution of water features such as ponds, waterfalls, and fountains.",
-      ],
-    },
-    // ################## proj 33
-    {
-      id: 32,
-      title: " Swan Lake North Coast by Hassan Allam",
-      images: [img1proj33, img2proj33],
-      owner: "",
-      consultant: "",
-      startDate: "",
-      endDate: "",
-      location: "North Coast",
-      // contractValue: "",
-      // projectDescription: "",
-      fullDescription: "",
-      scopeOfWork: [
-        "Hardscaping: Construction of pathways, retaining walls, ponds, waterfalls, and outdoor furniture.",
-        " Land Preparation: Leveling and preparing the land for planting.",
-        "Softscape Works: Plant design, selection, and arrangement of trees, shrubs, and flowers.",
-        "Irrigation Systems: Design and implementation of effective irrigation systems.",
-        "Electrical Work: Design and implementation of lighting systems to enhance the space and provide night-time illumination.",
-        "Water Features: Design and installation of water features such as ponds, waterfalls, and fountains.",
       ],
     },
     // #################

@@ -196,7 +196,7 @@ export default function ContactPage() {
               </div>
               <div className="flex justify-center items-center gap-2">
                 <FaPhoneAlt />{" "}
-                <a href="tel:+201040391955">
+                <a href="https://wa.me/01040391955" target="_blank">
                   <span>+201040391955</span>
                 </a>
               </div>

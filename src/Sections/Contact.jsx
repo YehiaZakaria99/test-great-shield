@@ -37,7 +37,7 @@ export default function Contact() {
             </div>
             <div className="flex items-center gap-3 text-gray-200">
               <FaPhoneAlt />{" "}
-              <a href="https://wa.me/01040391955" target="_blank">
+              <a href="https://wa.me/+21040391955" target="_blank">
                 <span>+201040391955</span>
               </a>
             </div>

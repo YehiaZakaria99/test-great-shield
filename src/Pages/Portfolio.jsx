@@ -54,7 +54,7 @@ export default function Portfolio() {
             <h2 className="md:text-3xl text-2xl font-bold text-mainColor" data-aos="fade-left">
               Eng. Mohamed Abdel Raouf
             </h2>
-            <p className="text-sky-400" data-aos="fade-right">General Manager</p>
+            <p className="text-sky-400" data-aos="fade-right">Chairman</p>
           </div>
 
           {/* Bio + Media */}

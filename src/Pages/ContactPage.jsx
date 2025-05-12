@@ -38,13 +38,6 @@ export default function ContactPage() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    /* 
-    service-id: service_ztevk08
-template-id: template_bvdhiro
-
-public-key: OOlPmBj-KjzyftCSE
-    */
     emailjs
       .sendForm(
         "service_ztevk08",
@@ -111,7 +104,7 @@ public-key: OOlPmBj-KjzyftCSE
                 data-aos-delay={500}
                 ref={form}
                 onSubmit={sendEmail}
-                className="space-y-6 bg-navBg p-8 rounded-2xl shadow-sm shadow-[#ff8904] "
+                className="space-y-6 bg-navBg text-navBg font-bold p-8 rounded-2xl shadow-sm shadow-[#ff8904] "
               >
                 <div>
                   <label className="block mb-2 font-semibold text-mainColor">
@@ -220,11 +213,3 @@ public-key: OOlPmBj-KjzyftCSE
     </>
   );
 }
-
-/* 
-
-service-id: service_ztevk08
-template-id: template_bvdhiro
-
-public-key: OOlPmBj-KjzyftCSE
-*/

@@ -40,7 +40,7 @@ export default function ContactPage() {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_ztevk08",
+        "service_jgs7t2l",
         "template_bvdhiro",
         form.current,
         "OOlPmBj-KjzyftCSE"

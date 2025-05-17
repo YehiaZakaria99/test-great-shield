@@ -3,29 +3,30 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
 import { Route } from "react-router-dom";
-import Navbar from "./Components/Navbar/Navbar.jsx";
-
 import { lazy, Suspense } from "react";
 
-const ContactPage = lazy(() => import("./Pages/ContactPage.jsx"));
+import Navbar from "./Components/Navbar/Navbar.jsx";
+
+import Home from "./Pages/Home.jsx";
 const AboutPage = lazy(() => import("./Pages/AboutPage/AboutPage.jsx"));
 const ServicesPage = lazy(() => import("./Pages/ServicesPage.jsx"));
+const ContactPage = lazy(() => import("./Pages/ContactPage.jsx"));
+const ProjectsPage = lazy(() => import("./Pages/ProjectsPage.jsx"));
+const LandscapesPage = lazy(() => import("./Pages/LandscapesPage.jsx"));
+const CustomersPage = lazy(() => import("./Pages/CustomersPage.jsx"));
+const Portfolio = lazy(() => import("./Pages/Portfolio.jsx"));
+const Media = lazy(() => import("./Pages/Media.jsx"));
 const NotFound = lazy(() => import("./Pages/NotFound.jsx"));
 
-import Footer from "./Components/Footer/Footer.jsx";
-import Loading from "./Components/Loading/Loading.jsx";
-import Home from "./Pages/Home.jsx";
-import ProjectsPage from "./Pages/ProjectsPage.jsx";
 import ProjectDetails from "./Pages/ProjectDetails.jsx";
+import Footer from "./Components/Footer/Footer.jsx";
+
+import Loading from "./Components/Loading/Loading.jsx";
 import ProjectsContextProvider from "./Context/ProjectsContext.jsx";
-import CustomersPage from "./Pages/CustomersPage.jsx";
 import CustomersContextProvider from "./Context/CustomersContext.jsx";
-import Portfolio from "./Pages/Portfolio.jsx";
-import Media from "./Pages/Media.jsx";
 import AboutOverview from "./Pages/AboutPage/AboutOverview.jsx";
 import Leadership from "./Pages/AboutPage/Leadership.jsx";
 import MediaContextProvider from "./Context/MediaContext.jsx";
-import LandscapesPage from "./Pages/LandscapesPage.jsx";
 import LandscapesContextProvider from "./Context/LandscapesContext.jsx";
 // import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
@@ -95,12 +96,9 @@ function App() {
         <Route
           path="/projectDetails/:id"
           element={
-            <Suspense fallback={<Loading />}>
-              {" "}
-              <ProjectsContextProvider>
-                <ProjectDetails />{" "}
-              </ProjectsContextProvider>
-            </Suspense>
+            <ProjectsContextProvider>
+              <ProjectDetails />{" "}
+            </ProjectsContextProvider>
           }
         />
         <Route

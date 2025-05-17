@@ -40,19 +40,20 @@ export default function AboutOverview() {
     };
 
     if (openModalId) {
-      document.body.style.overflow = "hidden";
-      document.documentElement.style.overflow = "hidden";
+      // document.body.style.overflow = "hidden";
+      // document.documentElement.style.overflow = "hidden";
 
       document.addEventListener("keydown", handleKeyDown);
       document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
     }
+    //  else {
+    //   document.body.style.overflow = "";
+    //   document.documentElement.style.overflow = "";
+    // }
 
     return () => {
-      document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
+      // document.body.style.overflow = "";
+      // document.documentElement.style.overflow = "";
       document.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("mousedown", handleClickOutside);
     };

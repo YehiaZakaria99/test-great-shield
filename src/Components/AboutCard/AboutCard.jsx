@@ -13,7 +13,7 @@ const AboutCard = ({ title, img, link }) => {
   }, []);
   const scrollWithOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -300;
+    const yOffset = -400;
     window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
   };
   return (

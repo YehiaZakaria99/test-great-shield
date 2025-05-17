@@ -58,11 +58,11 @@ const AboutPageCard = ({
               showModalClass
                 ? "scale-100 opacity-100 translate-y-0"
                 : "scale-95 opacity-0 translate-y-8"
-            } max-h-[95vh] overflow-y-auto custom-scrollbar flex flex-col`}
+            } max-h-[95vh] h-full overflow-y-auto custom-scrollbar flex flex-col`}
           >
             {/* Close Button */}
             <button
-              className="absolute top-0 right-0 md:top-4 md:right-4 text-gray-400 hover:text-red-500 transition z-10"
+              className="absolute top-3 right-2 md:top-4 md:right-4 text-gray-400 hover:text-red-500 transition z-10"
               onClick={closeModal}
             >
               <FaTimes size={28} />

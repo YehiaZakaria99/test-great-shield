@@ -134,13 +134,9 @@ function App() {
             </Suspense>
           }
         />
-        <Route
-          path="*"
-          element={
-            <div className="text-center mt-20 text-xl"> {<NotFound />} </div>
-          }
-        />
+        <Route path="*" element={<NotFound />} />
       </Routes>
+
       <Footer />
     </>
   );
